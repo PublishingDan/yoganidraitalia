@@ -1,0 +1,89 @@
+/* ========== CONTACT FORM (condiviso su tutte le pagine) ========== */
+.contatti {
+  padding: clamp(4rem, 9vw, 8rem) var(--gutter, 2rem);
+  background: var(--bg-elevated, #131630);
+  border-top: 1px solid var(--line, rgba(245,241,232,0.08));
+}
+.contatti-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contatti h2 { margin-bottom: 1rem; }
+.contatti-intro {
+  color: var(--text-dim, #d4cdb8);
+  margin-bottom: 2.75rem;
+  font-size: 1.05rem;
+}
+.contatti-form { text-align: left; }
+.contatti .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+@media (max-width: 600px) { .contatti .form-row { grid-template-columns: 1fr; } }
+.contatti .field { margin-bottom: 1.25rem; }
+.contatti .field label {
+  display: block;
+  font-family: var(--font-label, serif);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold, #c9a45c);
+  margin-bottom: 0.5rem;
+}
+.contatti .field input,
+.contatti .field textarea {
+  width: 100%;
+  background: var(--bg-card, #181b35);
+  border: 1px solid var(--line-strong, rgba(201,164,92,0.25));
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  color: var(--text-primary, #f5f1e8);
+  font-family: var(--font-body, sans-serif);
+  font-size: 1rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.contatti .field input:focus,
+.contatti .field textarea:focus {
+  outline: none;
+  border-color: var(--gold, #c9a45c);
+  box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.15);
+}
+.contatti .field textarea { resize: vertical; min-height: 120px; }
+.contatti .field input::placeholder,
+.contatti .field textarea::placeholder { color: rgba(212, 205, 184, 0.4); }
+.contatti .form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin: 0.5rem 0 1.75rem;
+  font-size: 0.9rem;
+  color: var(--text-dim, #d4cdb8);
+}
+.contatti .form-consent input { margin-top: 0.25rem; accent-color: var(--gold, #c9a45c); flex-shrink: 0; }
+.contatti .form-consent a { color: var(--gold, #c9a45c); text-decoration: underline; }
+.contatti .form-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: var(--gold, #c9a45c);
+  color: var(--bg-base, #0a0c1f);
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 1rem 2rem;
+  font-family: var(--font-body, sans-serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.contatti .form-submit:hover {
+  background: var(--gold-bright, #e8d3a8);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(201, 164, 92, 0.5);
+}
+.contatti .hp { position: absolute; left: -5000px; }

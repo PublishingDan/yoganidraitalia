@@ -387,6 +387,7 @@ h1, h2, h3, h4,
   border-bottom: 1px solid rgba(201,164,92,.1);
 }
 </style>
+  <link rel="stylesheet" href="/assets/contact-form.css">
 </head>
 <body>
 
@@ -487,6 +488,51 @@ h1, h2, h3, h4,
   <h2>6. <em>Modifiche</em></h2>
   <p>Il Titolare si riserva di modificare questa informativa in qualsiasi momento, dandone comunicazione tramite questa pagina.</p>
 </main>
+
+<!-- ========== CONTATTI ========== -->
+<section class="contatti" id="contatti">
+  <div class="contatti-inner">
+    <span class="eyebrow">Scrivici</span>
+    <h2 class="display-l">Resta in <em>contatto</em></h2>
+    <p class="contatti-intro">
+      Per informazioni su pratiche, percorsi, ritiri o per una domanda a Danilo.
+      Lascia i tuoi recapiti: ti rispondiamo personalmente.
+    </p>
+
+    <form name="contatti" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/grazie.html" class="contatti-form">
+      <input type="hidden" name="form-name" value="contatti">
+      <p class="hp"><label>Non compilare se sei umano: <input name="bot-field"></label></p>
+
+      <div class="field">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Come ti chiami" autocomplete="name">
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="latua@email.it" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="telefono">Telefono <span aria-hidden="true">*</span></label>
+          <input type="tel" id="telefono" name="telefono" required placeholder="+39 ..." autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" name="messaggio" placeholder="Raccontaci come possiamo aiutarti (facoltativo)"></textarea>
+      </div>
+
+      <label class="form-consent">
+        <input type="checkbox" name="consenso_privacy" required>
+        <span>Ho letto e accetto la <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a> e acconsento a essere ricontattato.</span>
+      </label>
+
+      <button type="submit" class="form-submit">Invia <span class="arrow">&rarr;</span></button>
+    </form>
+  </div>
+</section>
 
 <footer class="legal-footer">
   © 2026 Danilo Ratti · Yoga Nidra Italia™ · P.IVA 04440360164
