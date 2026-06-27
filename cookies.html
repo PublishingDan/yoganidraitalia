@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/cookieconsent/cookieconsent.css">
+<link rel="stylesheet" href="/assets/cookieconsent/cc-branding.css">
+<title>Cookie Policy · Yoga Nidra Italia™</title>
+<meta name="description" content="Informativa sui cookie e sugli strumenti di tracciamento utilizzati da yoganidraitalia.it · Yoga Nidra Italia™ di Danilo Ratti.">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #07091a;
+  --bg-base: #0a0c1f;
+  --bg-elevated: #131630;
+  --bg-card: #181b35;
+  --gold: #c9a45c;
+  --gold-bright: #e8d3a8;
+  --gold-deep: #8b7038;
+  --text-primary: #f5f1e8;
+  --text-muted: #ede8da;
+  --text-dim: #d4cdb8;
+  --line: rgba(245, 241, 232, 0.08);
+  --line-strong: rgba(201, 164, 92, 0.25);
+  --font-display: 'Playfair Display', serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-label: 'Italiana', serif;
+  --max-width: 880px;
+  --gutter: clamp(1.5rem, 4vw, 4rem);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 300;
+}
+a { color: var(--gold); text-decoration: none; transition: color 0.3s ease; }
+a:hover { color: var(--gold-bright); }
+img { max-width: 100%; display: block; }
+
+.legal-nav {
+  padding: 1.5rem var(--gutter);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.legal-nav img { height: 36px; }
+.legal-nav-text {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.legal-nav-text small {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-top: 2px;
+}
+.legal-nav-back {
+  margin-left: auto;
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.legal-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 6rem) var(--gutter);
+}
+
+.legal-eyebrow {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.legal-wrapper h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.legal-wrapper h1 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.legal-intro {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.legal-meta {
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 3.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.legal-wrapper h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 3vw, 1.95rem);
+  letter-spacing: -0.005em;
+  color: var(--gold-bright);
+  margin: 3rem 0 1rem;
+}
+
+.legal-wrapper h2 em { font-style: italic; }
+
+.legal-wrapper h3 {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 2rem 0 0.75rem;
+  font-weight: 400;
+}
+
+.legal-wrapper h4 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--gold-bright);
+  margin: 1.5rem 0 0.5rem;
+  font-weight: 400;
+}
+
+.legal-wrapper p {
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+}
+
+.legal-wrapper ul {
+  margin: 1rem 0 1.5rem 1.5rem;
+  color: var(--text-primary);
+}
+
+.legal-wrapper li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-wrapper strong {
+  color: var(--gold-bright);
+  font-weight: 500;
+}
+
+.service-block {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.service-block h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.service-block p {
+  margin-bottom: 0.5rem;
+  font-size: 0.98rem;
+  color: var(--text-muted);
+}
+
+.service-block p:last-child { margin-bottom: 0; }
+
+.service-block .data-list {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  font-family: var(--font-label);
+  letter-spacing: 0.05em;
+}
+
+.cookie-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.95rem;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+}
+
+.cookie-table th, .cookie-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.cookie-table th {
+  font-family: var(--font-label);
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(201, 164, 92, 0.05);
+  font-weight: 400;
+}
+
+.cookie-table td:first-child {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.legal-footer {
+  max-width: var(--max-width);
+  margin: 4rem auto 0;
+  padding: 3rem var(--gutter);
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  line-height: 1.8;
+}
+
+.legal-footer em {
+  color: var(--gold);
+  font-style: italic;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  text-transform: none;
+  font-size: 1.15em;
+}
+
+.legal-footer-back {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  body { font-size: 16px; }
+  .legal-nav { flex-wrap: wrap; gap: 0.75rem; }
+  .legal-nav-text { font-size: 0.95rem; }
+  .legal-nav-text small { font-size: 0.75rem; letter-spacing: 0.22em; }
+  .legal-nav-back { font-size: 0.85rem; letter-spacing: 0.15em; margin-left: 0; }
+  .legal-eyebrow { font-size: 0.95rem; letter-spacing: 0.3em; }
+  .legal-meta { font-size: 0.85rem; letter-spacing: 0.15em; }
+  .legal-intro { font-size: 1.1rem; }
+  .service-block { padding: 1rem 1.1rem; }
+  .cookie-table { font-size: 0.88rem; display: block; overflow-x: auto; }
+  .cookie-table th, .cookie-table td { padding: 0.65rem 0.6rem; }
+}
+
+/* ========== FONT: Playfair Display per i titoli ========== */
+:root { --font-display: "Playfair Display", serif; }
+h1, h2, h3, h4,
+.display-xxl, .display-xl, .display-l,
+.manifesto-text p,
+.price-display,
+.nav-brand-text,
+.footer-brand-text { font-family: "Playfair Display", serif !important; }
+
+/* ========== HAMBURGER + MOBILE MENU ========== */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 200;
+  flex-shrink: 0;
+}
+.nav-hamburger span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--gold, #c9a45c);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  transform-origin: center;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+@media (max-width: 900px) {
+  .nav-hamburger { display: flex; }
+  .nav-links { display: none !important; }
+}
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 150;
+  background: rgba(7, 9, 26, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 5rem 2rem 3rem;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a {
+  font-family: var(--font-display, "Playfair Display", serif);
+  font-size: clamp(1.3rem, 4.5vw, 1.9rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #f5f1e8;
+  text-decoration: none;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(201, 164, 92, 0.12);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+.nav-mobile-menu a:last-child { border-bottom: none; }
+.nav-mobile-menu a:hover { color: #c9a45c; }
+.nav-mobile-free {
+  background: #c9a45c;
+  color: #0a0c1f;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.nav-old {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  background: rgba(7,9,26,.6);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(201,164,92,.1);
+}
+</style>
+</head>
+<body>
+
+<nav class="legal-nav">
+  <img src="images/logo.png" alt="Yoga Nidra Italia™">
+  <div class="legal-nav-text">Yoga Nidra Italia™<small>Il Sonno dei Re™ · Est. 2001</small></div>
+  <a class='legal-nav-back' href='/'>← Torna al sito</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="navMobileMenu">
+  <a href="/la-caverna">La Caverna del Cuore <span class="nav-mobile-free">GRATIS</span></a>
+  <a href="/il-nidrista">Il Nidrista™</a>
+  <a href="/il-sonno-dei-re">Il Sonno dei Re™</a>
+  <a href="/audioyoga-studio">AudioYoga Studio™</a>
+  <a href="/the-spiral">The Spiral</a>
+  <a href="/pratica-del-giovedi">Pratica del Giovedì</a>
+  <a href="/ritiro-solstizio">Ritiro del Solstizio</a>
+</div>
+
+<main class="legal-wrapper">
+  <span class="legal-eyebrow">Informativa</span>
+  <h1>Cookie <em>Policy</em></h1>
+  <p class="legal-intro">Cookie Policy di www.yoganidraitalia.it</p>
+  <p class="legal-meta">Ultimo aggiornamento: 8 maggio 2026</p>
+
+  <p>Questa informativa descrive l'uso dei cookie e di altri strumenti di tracciamento sul sito <a href="https://yoganidraitalia.it">yoganidraitalia.it</a>, in conformità alle "Linee guida cookie e altri strumenti di tracciamento" del Garante per la Protezione dei Dati Personali (10 giugno 2021) e al Regolamento (UE) 2016/679 (GDPR).</p>
+
+  <h2>1. <em>Cosa sono i cookie</em></h2>
+  <p>I cookie sono piccoli file di testo che i siti visitati salvano nel browser dell'Utente. Servono a far funzionare il sito o a renderlo più efficiente, oltre a fornire informazioni al Titolare sul comportamento di navigazione. Esistono cookie tecnici (necessari) e cookie di profilazione (che richiedono il consenso esplicito).</p>
+
+  <h2>2. <em>Strumenti di tracciamento utilizzati</em></h2>
+  <p>Yoga Nidra Italia™ è un sito statico ospitato su Netlify, costruito per essere il più leggero e rispettoso possibile della privacy dell'Utente. <strong>Non utilizza cookie di profilazione, di marketing o di pubblicità.</strong> Non sono presenti pixel di tracciamento, sistemi di analytics di terze parti o pubblicità comportamentale.</p>
+
+  <h3>Cookie tecnici (necessari)</h3>
+  <p>Sono indispensabili per il corretto funzionamento del sito e <strong>non richiedono il consenso dell'Utente</strong> (art. 122 Codice Privacy). Gestiscono la navigazione, la sicurezza, il bilanciamento di carico e le preferenze tecniche di base.</p>
+
+  <table class="cookie-table">
+    <thead>
+      <tr><th>Nome</th><th>Fornitore</th><th>Finalità</th><th>Durata</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>nf_*</td>
+        <td>Netlify</td>
+        <td>Cookie tecnici per il bilanciamento di carico e il routing CDN dell'hosting.</td>
+        <td>Sessione</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Strumenti di tracciamento di terze parti (su navigazione esterna)</h3>
+  <p>Quando l'Utente abbandona questo sito cliccando su un link verso piattaforme esterne, possono essere installati cookie da quelle piattaforme. Tali cookie sono regolati dalle informative dei rispettivi titolari, non da Yoga Nidra Italia™.</p>
+
+  <div class="service-block">
+    <h4>Gumroad</h4>
+    <p>Al click sui pulsanti di acquisto, l'Utente viene reindirizzato su gumroad.com (Gumroad, Inc.), che applica la propria informativa.</p>
+    <p class="data-list"><strong>Privacy Policy:</strong> <a href="https://gumroad.com/privacy" target="_blank" rel="noopener">gumroad.com/privacy</a></p>
+  </div>
+
+  <div class="service-block">
+    <h4>Telegram, Facebook e Instagram</h4>
+    <p>Al click sui link ai canali e profili ufficiali, l'Utente viene reindirizzato sulle rispettive piattaforme. Valgono le policy di Telegram FZ-LLC e Meta Platforms Ireland Ltd.</p>
+    <p class="data-list">
+      <strong>Privacy Policy:</strong>
+      <a href="https://telegram.org/privacy" target="_blank" rel="noopener">Telegram</a> ·
+      <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta</a>
+    </p>
+  </div>
+
+  <div class="service-block">
+    <h4>Google Fonts</h4>
+    <p>Il caricamento dei caratteri tipografici dai server di Google LLC può comportare il rilevamento dell'IP da parte di Google. Yoga Nidra Italia™ non riceve né conserva tale dato.</p>
+    <p class="data-list"><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+  </div>
+
+  <h2>3. <em>Come gestire o disabilitare i cookie</em></h2>
+  <p>L'Utente può sempre gestire o disabilitare i cookie direttamente dal proprio browser. Si segnalano le guide ufficiali:</p>
+  <ul>
+    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+    <li><a href="https://support.mozilla.org/it/kb/Gestione%20dei%20cookie" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+    <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+    <li><a href="https://support.microsoft.com/it-it/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">Microsoft Edge</a></li>
+  </ul>
+  <p>La disabilitazione dei cookie tecnici può compromettere alcune funzionalità del sito.</p>
+
+  <h2>4. <em>Titolare del trattamento</em></h2>
+  <p>
+    <strong>Danilo Ratti · Yoga Nidra Italia™</strong><br>
+    Italia<br>
+    Partita IVA: <strong>04440360164</strong><br>
+    Codice Fiscale: <strong>04440360164</strong><br>
+    Email del Titolare: <a href="mailto:info@yoganidraitalia.it">info@yoganidraitalia.it</a>
+  </p>
+
+  <h2>5. <em>Diritti dell'Utente e contatti</em></h2>
+  <p>Per l'esercizio dei diritti previsti dal GDPR (accesso, rettifica, cancellazione, limitazione, portabilità, opposizione, revoca del consenso) si rimanda alla <a href='/privacy'>Privacy Policy</a>.</p>
+
+  <h2>6. <em>Modifiche</em></h2>
+  <p>Il Titolare si riserva di modificare questa informativa in qualsiasi momento, dandone comunicazione tramite questa pagina.</p>
+</main>
+
+<footer class="legal-footer">
+  © 2026 Danilo Ratti · Yoga Nidra Italia™ · P.IVA 04440360164
+  <br>
+  <a class='legal-footer-back' href='/'>← Torna al sito</a>
+  <br><br>
+  Proudly <em>SelfDesigned</em>
+</footer>
+
+<script defer src="/assets/cookieconsent/cookieconsent.umd.js"></script>
+<script defer src="/assets/cookieconsent/cc-config.js"></script>
+<script>
+(function(){
+  var btn = document.getElementById("navHamburger");
+  var menu = document.getElementById("navMobileMenu");
+  if(!btn || !menu) return;
+  btn.addEventListener("click", function(){
+    var open = menu.classList.toggle("open");
+    btn.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+  menu.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){
+      menu.classList.remove("open");
+      btn.classList.remove("open");
+      btn.setAttribute("aria-expanded","false");
+      document.body.style.overflow = "";
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Caverna del Cuore · Audio gratuito di Yoga Nidra Integrato™ - Yoga Nidra Italia™</title>
+<meta name="description" content="La Caverna del Cuore: una sessione completa di Yoga Nidra Integrato™ di 50 minuti, registrata dal vivo, in regalo. Un viaggio negli Stati Oltre la Veglia, con Danilo Ratti.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#07091a;--navy-2:#0a0c1f;--navy-3:#0e1228;
+    --gold:#c9a45c;--gold-soft:#d9bd86;--ivory:#f3ece0;--muted:#9aa0b5;
+    --line:rgba(201,164,92,.18);
+    --display:'Playfair Display', serif;--serif:'Cormorant Garamond', serif;--body:'Manrope', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--navy);color:var(--ivory);font-family:var(--body);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .em{font-style:italic;color:var(--gold-soft)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  .narrow{max-width:780px;margin:0 auto;padding:0 28px}
+  .marker{font-family:var(--serif);font-size:.78rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:18px;margin-bottom:30px}
+  .marker::before{content:"";width:46px;height:1px;background:var(--gold);opacity:.6}
+  h2{font-family:var(--display);font-weight:500;font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.1;letter-spacing:-.01em}
+  p.lead{font-family:var(--serif);font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.55;color:#e6dcc8}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:rgba(7,9,26,.6);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,164,92,.1)}
+  .brand{font-family:var(--display);font-size:1rem;letter-spacing:.04em;color:var(--ivory);text-decoration:none}
+  .brand small{display:block;font-family:var(--serif);font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);opacity:.8}
+  .nav-cta{font-family:var(--body);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);background:var(--gold);padding:11px 20px;border-radius:2px;text-decoration:none;font-weight:600;transition:.3s}
+  .nav-cta:hover{background:var(--gold-soft)}
+
+  header.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;text-align:center;padding:120px 28px 80px;
+    background:radial-gradient(130% 90% at 50% 0%, rgba(201,164,92,.12), transparent 58%),radial-gradient(80% 50% at 50% 115%, rgba(201,164,92,.07), transparent 55%),linear-gradient(180deg,#03040b 0%,#07091a 50%,#0a0c1f 100%)}
+  header.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.55) .5px,transparent .5px);background-size:46px 46px;opacity:.06}
+  .hero-inner{position:relative;z-index:2;max-width:880px;margin:0 auto}
+  .eyebrow{font-family:var(--serif);font-size:.85rem;letter-spacing:.46em;text-transform:uppercase;color:var(--gold);margin-bottom:34px}
+  header.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(3rem,9vw,6.2rem);line-height:.98;letter-spacing:-.02em;margin-bottom:30px}
+  header.hero h1 .em{font-weight:500}
+  .hero-sub{font-family:var(--serif);font-size:clamp(1.3rem,3vw,1.85rem);color:#e6dcc8;line-height:1.4;max-width:640px;margin:0 auto 14px}
+  .hero-line{color:var(--muted);font-size:1rem;letter-spacing:.02em;max-width:560px;margin:0 auto 46px}
+  .cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;font-family:var(--body);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;padding:16px 32px;border-radius:2px;text-decoration:none;font-weight:600;transition:.3s}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-gold:hover{background:var(--gold-soft);transform:translateY(-2px)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ivory)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-soft)}
+  .hero-meta{margin-top:64px;display:flex;gap:40px;justify-content:center;flex-wrap:wrap;font-family:var(--serif);color:var(--muted);font-size:1rem}
+  .hero-meta span{color:var(--gold-soft)}
+
+  section{padding:110px 0;position:relative}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);max-width:1120px;margin:0 auto}
+
+  .prose p{font-family:var(--serif);font-size:clamp(1.25rem,2.5vw,1.6rem);line-height:1.6;color:#e6dcc8;margin-bottom:24px}
+  .prose p:last-child{margin-bottom:0}
+
+  .bring{margin-top:34px;font-family:var(--serif);font-size:1.2rem;color:#e6dcc8;line-height:1.7;border-left:2px solid var(--gold);padding-left:22px}
+  .bring b{color:var(--gold-soft);font-weight:500}
+
+  .bridge{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:46px}
+  .bcard{border:1px solid var(--line);border-radius:4px;padding:34px 30px;background:linear-gradient(160deg,#0d1126,#0a0c1f);text-decoration:none;display:block;transition:.3s}
+  .bcard:hover{border-color:var(--gold);transform:translateY(-3px)}
+  .bcard .k{font-family:var(--serif);color:var(--gold);font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;margin-bottom:12px}
+  .bcard h3{font-family:var(--display);color:var(--ivory);font-size:1.5rem;font-weight:500;margin-bottom:10px}
+  .bcard p{color:#cfcabb;font-size:.96rem;line-height:1.6}
+  .bcard .go{color:var(--gold-soft);font-size:.85rem;letter-spacing:.1em;margin-top:16px;display:inline-block}
+
+  .final{text-align:center;background:radial-gradient(110% 80% at 50% 0%, rgba(201,164,92,.12), transparent 60%),linear-gradient(180deg,#0a0c1f,#03040b);border-top:1px solid var(--line)}
+  .final h2{margin-bottom:18px}
+  .final .sig{font-family:var(--serif);font-style:italic;color:var(--gold-soft);font-size:1.3rem;margin-bottom:30px}
+  .final p{color:var(--muted);max-width:520px;margin:0 auto 38px;font-size:1.05rem}
+
+  footer{background:#03040b;border-top:1px solid rgba(201,164,92,.1);padding:64px 0 40px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+  .foot-brand .fb-name{font-family:var(--display);font-size:1.1rem}
+  .foot-brand small{font-family:var(--serif);letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-size:.68rem;display:block;margin-bottom:18px}
+  .foot-brand p{color:var(--muted);font-size:.9rem;line-height:1.7;max-width:340px}
+  footer h4{font-family:var(--serif);color:var(--gold);font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;font-weight:500}
+  footer a{color:#cfcabb;text-decoration:none;display:block;padding:5px 0;font-size:.9rem;transition:.2s}
+  footer a:hover{color:var(--gold-soft)}
+  .copy{margin-top:48px;padding-top:24px;border-top:1px solid rgba(201,164,92,.1);color:var(--muted);font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:780px){
+    .bridge,.foot-grid{grid-template-columns:1fr}
+    .hero-meta{gap:22px}
+    section{padding:80px 0}
+  }
+
+/* ========== FONT: Playfair Display per i titoli ========== */
+:root { --font-display: "Playfair Display", serif; }
+h1, h2, h3, h4,
+.display-xxl, .display-xl, .display-l,
+.manifesto-text p,
+.price-display,
+.nav-brand-text,
+.footer-brand-text { font-family: "Playfair Display", serif !important; }
+
+/* ========== HAMBURGER + MOBILE MENU ========== */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 200;
+  flex-shrink: 0;
+}
+.nav-hamburger span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--gold, #c9a45c);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  transform-origin: center;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+@media (max-width: 900px) {
+  .nav-hamburger { display: flex; }
+  .nav-links { display: none !important; }
+}
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 150;
+  background: rgba(7, 9, 26, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 5rem 2rem 3rem;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a {
+  font-family: var(--font-display, "Playfair Display", serif);
+  font-size: clamp(1.3rem, 4.5vw, 1.9rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #f5f1e8;
+  text-decoration: none;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(201, 164, 92, 0.12);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+.nav-mobile-menu a:last-child { border-bottom: none; }
+.nav-mobile-menu a:hover { color: #c9a45c; }
+.nav-mobile-free {
+  background: #c9a45c;
+  color: #0a0c1f;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.nav-old {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  background: rgba(7,9,26,.6);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(201,164,92,.1);
+}
+</style>
+</head>
+<body>
+
+<nav class="nav-old" id="nav">
+  <a class="brand" href="/">Yoga Nidra Italia™<small>Il Sonno dei Re™ · Est. 2001</small></a>
+  <a class="nav-cta" href="https://yoganidraitalia.systeme.io/caverna">Ricevila gratis →</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile-menu" id="navMobileMenu">
+  <a href="/la-caverna">La Caverna del Cuore <span class="nav-mobile-free">GRATIS</span></a>
+  <a href="/il-nidrista">Il Nidrista™</a>
+  <a href="/il-sonno-dei-re">Il Sonno dei Re™</a>
+  <a href="/audioyoga-studio">AudioYoga Studio™</a>
+  <a href="/the-spiral">The Spiral</a>
+  <a href="/pratica-del-giovedi">Pratica del Giovedì</a>
+  <a href="/ritiro-solstizio">Ritiro del Solstizio</a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Audio inedito · Yoga Nidra Integrato™ · in regalo</div>
+    <h1>La Caverna <span class="em">del Cuore</span></h1>
+    <p class="hero-sub">Una sessione completa di Yoga Nidra Integrato™ di 50 minuti, registrata dal vivo. In ascolto, gratuita.</p>
+    <p class="hero-line">Un viaggio negli Stati Oltre la Veglia. Cuffie, schermo spento, e lasciati guidare.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="https://yoganidraitalia.systeme.io/caverna">Ricevila gratis →</a>
+      <a class="btn btn-ghost" href="#cose">Scopri di più ↓</a>
+    </div>
+    <div class="hero-meta">
+      <div>50 <span>minuti</span></div>
+      <div>Registrata <span>dal vivo</span></div>
+      <div>6 febbraio <span>2020</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- I · COS'È -->
+<section id="cose" class="prose">
+  <div class="narrow reveal">
+    <div class="marker">Capitolo I · Cos'è</div>
+    <p>Una sessione completa di Yoga Nidra Integrato™ registrata dal vivo presso il centro Gaia Luce Yoga il 6 febbraio 2020, pochi giorni prima che il mondo cambiasse per sempre.</p>
+    <p>Cinquanta minuti di pratica per portarti negli <span class="em">Stati Oltre la Veglia</span>: rilassamento profondo del corpo, quiete della mente, contatto con quello spazio interiore che gli antichi yogi chiamavano la Caverna del Cuore.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- II · PERCHÉ -->
+<section id="perche" class="prose">
+  <div class="narrow reveal">
+    <div class="marker">Capitolo II · Perché proprio questo audio</div>
+    <p>Lo apro adesso, sei anni dopo, perché segna esattamente il punto da cui Yoga Nidra Italia™ è ripartita, interiormente, durante questi anni di silenzio pubblico. Riaprirlo ora significa <span class="em">onorare il percorso</span> che abbiamo attraversato.</p>
+    <p>I miei maestri di Yoga Nidra, Swami Satyananda Saraswati e Micheline Flack, hanno entrambi inciso una loro versione della Caverna del Cuore. Non è un caso. La caverna è uno degli archetipi più antichi dell'Umanità: i primi culti spirituali sono nati nelle profondità della Terra, in caverne preistoriche come Lascaux, in Francia, dipinte tra i 35 e i 40 mila anni fa. Da allora, l'Uomo cerca il proprio centro andando dentro.</p>
+    <p>Questa è la versione integrata che ho elaborato in venticinque anni di studio e insegnamento.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- III · COME ASCOLTARLA -->
+<section id="come" class="prose">
+  <div class="narrow reveal">
+    <div class="marker">Capitolo III · Come ascoltarla</div>
+    <h2>Un piccolo <span class="em">rituale</span></h2>
+    <p class="bring">Trova un luogo silenzioso. <b>Sdraiati comodo</b>, copriti se serve. Cuffie consigliate. Spegni lo schermo: l'esperienza è solo audio. Poi <b>lasciati guidare</b>.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- IV · CONTINUARE -->
+<section id="oltre">
+  <div class="wrap reveal">
+    <div class="marker">Capitolo IV · Quando vuoi continuare</div>
+    <h2>La soglia è <span class="em">solo l'inizio</span></h2>
+    <div class="bridge">
+      <a class="bcard" href="https://yoganidraitalia.it/pratica-del-giovedi">
+        <div class="k">Dal vivo, gratis</div>
+        <h3>La Pratica del Giovedì</h3>
+        <p>Ogni giovedì sera, una sessione di Yoga Nidra Integrato™ guidata dal vivo su Zoom. Gratuita, ogni settimana. Per praticare insieme, non da solo.</p>
+        <span class="go">Registrati →</span>
+      </a>
+      <a class="bcard" href="https://yoganidraitalia.it/il-nidrista">
+        <div class="k">Pratica solitaria</div>
+        <h3>Il Nidrista™</h3>
+        <p>Una raccolta progressiva di audio di Yoga Nidra Integrato™ da praticare quando vuoi, ovunque. Per portare la Caverna del Cuore nella tua settimana.</p>
+        <span class="go">Esplora il canale →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final reveal">
+  <div class="narrow">
+    <div class="marker" style="justify-content:center">Buon viaggio, Nidrista</div>
+    <h2>La Caverna <span class="em">ti aspetta.</span></h2>
+    <div class="sig">È un regalo. Ricevila e lasciati guidare.</div>
+    <a class="btn btn-gold" href="https://yoganidraitalia.systeme.io/caverna">Ricevila gratis →</a>
+    <p style="margin-top:34px">Danilo Ratti - Yoga Nidra Italia™</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="fb-name">Yoga Nidra Italia™</div>
+        <small>Il Sonno dei Re™ · Est. 2001</small>
+        <p>La pratica autentica dello yoga del risveglio e del sonno consapevole. In italiano, dalle fonti, integrato e aggiornato, libero, senza dogmi e senza compromessi.</p>
+      </div>
+      <div>
+        <h4>Sentieri</h4>
+        <a href="/la-caverna">La Caverna del Cuore</a>
+        <a href="/il-nidrista">Il Nidrista™</a>
+        <a href="/il-sonno-dei-re">Il Sonno dei Re™</a>
+        <a href="/audioyoga-studio">AudioYoga Studio™</a>
+        <a href="/the-spiral">The Spiral</a>
+        <a href="/pratica-del-giovedi">Pratica del Giovedì</a>
+        <a href="/ritiro-solstizio">Ritiro del Solstizio</a>
+      
+      <div>
+        <h4>Contatto</h4>
+        <a href="mailto:danilo@yoganidraitalia.it">danilo@yoganidraitalia.it</a>
+        <a href="https://wa.me/393402816049">WhatsApp · 340 281 6049</a>
+        <a href="https://t.me/yoganidraitalia">Canale Telegram</a>
+        <a href="https://yoganidraitalia.gumroad.com">Catalogo Gumroad</a>
+      </div>
+    </div>
+        <div class="copy">
+      <span>© 2026 Danilo Ratti · Yoga Nidra Italia™ · P.IVA 04440360164</span>
+      <span>
+        <a href="https://www.facebook.com/yoganidraitalia" target="_blank" rel="noopener">Facebook</a> &nbsp;·&nbsp;
+        <a href="https://www.instagram.com/yoganidraitalia" target="_blank" rel="noopener">Instagram</a> &nbsp;·&nbsp;
+        <a href="/privacy">Privacy</a> &nbsp;·&nbsp;
+        <a href="/cookies">Cookies</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+<script>
+(function(){
+  var btn = document.getElementById("navHamburger");
+  var menu = document.getElementById("navMobileMenu");
+  if(!btn || !menu) return;
+  btn.addEventListener("click", function(){
+    var open = menu.classList.toggle("open");
+    btn.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+  menu.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){
+      menu.classList.remove("open");
+      btn.classList.remove("open");
+      btn.setAttribute("aria-expanded","false");
+      document.body.style.overflow = "";
+    });
+  });
+})();
+</script>
+</body>
+</html>

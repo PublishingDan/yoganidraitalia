@@ -1,0 +1,2724 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/cookieconsent/cookieconsent.css">
+<link rel="stylesheet" href="/assets/cookieconsent/cc-branding.css">
+<title>Il Nidrista™ · Il canale di pratica di Yoga Nidra Integrato™ - Yoga Nidra Italia™</title>
+<meta name="description" content="Il Nidrista™ è il canale di pratica di Yoga Nidra Integrato™ di Danilo Ratti. Decine di audio originali registrati dal vivo, accessibili sempre. €29 al mese, disdici quando vuoi. 30 giorni soddisfatto o rimborsato.">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #07091a;
+  --bg-base: #0a0c1f;
+  --bg-elevated: #131630;
+  --bg-card: #181b35;
+  --gold: #c9a45c;
+  --gold-bright: #e8d3a8;
+  --gold-deep: #8b7038;
+  --purple-deep: #2d1b3d;
+  --text-primary: #f5f1e8;
+  --text-muted: #ede8da;
+  --text-dim: #d4cdb8;
+  --line: rgba(245, 241, 232, 0.08);
+  --line-strong: rgba(201, 164, 92, 0.25);
+
+  --font-display: 'Playfair Display', serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-label: 'Italiana', serif;
+
+  --max-width: 1440px;
+  --gutter: clamp(1.5rem, 4vw, 4rem);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  body { font-size: 17px; line-height: 1.7; }
+}
+
+::selection { background: var(--gold); color: var(--bg-base); }
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ========== TYPOGRAPHY ========== */
+.eyebrow {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.display-xxl {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3rem, 9vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.display-xl {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+}
+
+.display-l {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 4.5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.serif-quote {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.4;
+  letter-spacing: 0.005em;
+}
+
+.italic { font-style: italic; }
+
+/* ========== NAV ========== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.5rem var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.nav.scrolled {
+  background: rgba(7, 9, 26, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: var(--line);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.nav-brand img { height: 36px; width: auto; }
+
+.nav-brand-text {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.nav-brand-text small {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  display: block;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+.nav-cta {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--bg-base);
+  background: var(--gold);
+  padding: 0.95rem 1.8rem;
+  border-radius: 2px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-cta:hover { background: var(--gold-bright); transform: translateY(-1px); }
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+}
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(201, 164, 92, 0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(139, 112, 56, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #07091a 0%, #0a0c1f 50%, #07091a 100%);
+}
+
+.hero-bg img {
+  display: none;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 100%, rgba(7,9,26,0.4) 0%, transparent 70%);
+}
+
+.hero-noise {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.05;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  animation: fadeUp 1s ease 0.3s both;
+}
+
+.hero-meta .eyebrow { color: var(--gold); }
+
+.hero-meta-line {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.75rem, 8.5vw, 7.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  max-width: 14ch;
+  animation: fadeUp 1.1s ease 0.5s both;
+}
+
+.hero h1 em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold-bright);
+}
+
+.hero-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  color: var(--text-muted);
+  max-width: 38ch;
+  margin-top: 2rem;
+  line-height: 1.5;
+  animation: fadeUp 1.1s ease 0.8s both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  animation: fadeUp 1.1s ease 1.1s both;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.4rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--bg-base);
+}
+
+.btn-primary:hover {
+  background: var(--gold-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(201, 164, 92, 0.5);
+}
+
+.btn-ghost {
+  border-color: rgba(245, 241, 232, 0.25);
+  color: var(--text-primary);
+  background: rgba(245, 241, 232, 0.03);
+  backdrop-filter: blur(8px);
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201, 164, 92, 0.05);
+}
+
+.btn .arrow { display: inline-block; transition: transform 0.3s ease; }
+.btn:hover .arrow { transform: translateX(4px); }
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+  animation: fadeIn 1s ease 1.5s both;
+}
+
+.hero-scroll-text {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 50px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0%, 100% { transform: scaleY(1); transform-origin: top; }
+  50% { transform: scaleY(0.3); transform-origin: top; }
+}
+
+.hero-corner-mark {
+  position: absolute;
+  top: 50%;
+  right: var(--gutter);
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: right center;
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.5em;
+  color: var(--gold);
+  text-transform: uppercase;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .hero-corner-mark { display: none; }
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s ease, transform 1s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ========== SECTION BASE ========== */
+section { padding: clamp(5rem, 10vw, 9rem) var(--gutter); position: relative; }
+.container { max-width: var(--max-width); margin: 0 auto; }
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+  flex-wrap: wrap;
+}
+
+.section-number {
+  font-family: var(--font-label);
+  font-size: 1.1rem;
+  letter-spacing: 0.5em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ========== MANIFESTO ========== */
+.manifesto {
+  background: var(--bg-base);
+  position: relative;
+}
+
+.manifesto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--gutter);
+  right: var(--gutter);
+  height: 1px;
+  background: var(--line);
+}
+
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.manifesto-meta {
+  position: sticky;
+  top: 6rem;
+}
+
+.manifesto-meta .eyebrow { display: block; margin-bottom: 1.5rem; }
+
+.manifesto-meta-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.manifesto-text p {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  margin-bottom: 1.5em;
+  color: var(--text-primary);
+}
+
+.manifesto-text p em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.manifesto-text p:last-child { margin-bottom: 0; }
+
+.manifesto-attribution {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.manifesto-attribution-line {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.manifesto-attribution-text {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .manifesto-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .manifesto-meta { position: static; }
+}
+
+/* ========== NUMBERS ========== */
+.numbers {
+  background: linear-gradient(180deg, var(--bg-base) 0%, var(--bg-deep) 100%);
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.number-cell {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-right: 1px solid var(--line);
+  position: relative;
+  transition: background 0.4s ease;
+}
+
+.number-cell:last-child { border-right: none; }
+.number-cell:hover { background: rgba(201, 164, 92, 0.03); }
+
+.number-value {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  color: var(--gold-bright);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.number-value sup {
+  font-size: 0.4em;
+  vertical-align: super;
+  color: var(--gold);
+  font-style: italic;
+}
+
+.number-label {
+  font-family: var(--font-label);
+  font-size: 2.1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+  .number-cell:nth-child(2) { border-right: none; }
+  .number-cell:nth-child(1), .number-cell:nth-child(2) { border-bottom: 1px solid var(--line); }
+}
+
+/* ========== GALLERY BENTO ========== */
+.gallery {
+  background: var(--bg-deep);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 220px;
+  gap: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  cursor: pointer;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  filter: grayscale(40%) brightness(0.85);
+}
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(7,9,26,0.6) 100%);
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+  filter: grayscale(0%) brightness(1);
+}
+
+.gallery-item:hover::after { opacity: 0; }
+
+.gallery-item-1 { grid-column: span 4; grid-row: span 2; }
+.gallery-item-2 { grid-column: span 2; grid-row: span 1; }
+.gallery-item-3 { grid-column: span 2; grid-row: span 1; }
+.gallery-item-4 { grid-column: span 2; grid-row: span 2; }
+.gallery-item-5 { grid-column: span 2; grid-row: span 1; }
+.gallery-item-6 { grid-column: span 2; grid-row: span 1; }
+
+.gallery-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 2;
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-caption { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+  .gallery-item-1 { grid-column: span 2; grid-row: span 2; }
+  .gallery-item-2, .gallery-item-3, .gallery-item-4, .gallery-item-5, .gallery-item-6 { grid-column: span 1; grid-row: span 1; }
+}
+
+/* ========== SENTIERI (Products) ========== */
+.sentieri {
+  background: var(--bg-base);
+  position: relative;
+}
+
+.sentieri-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+  align-items: end;
+}
+
+.sentieri-intro h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+}
+
+.sentieri-intro h2 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.sentieri-intro-text {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 50ch;
+}
+
+@media (max-width: 900px) {
+  .sentieri-intro { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.sentiero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  align-items: center;
+  padding: 3rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.sentiero:last-of-type { border-bottom: 1px solid var(--line); margin-bottom: 0; }
+
+.sentiero.reverse { direction: rtl; }
+.sentiero.reverse > * { direction: ltr; }
+
+.sentiero-visual {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--bg-elevated);
+}
+
+.sentiero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: brightness(0.9) contrast(1.1);
+  transition: transform 1s ease;
+}
+
+.sentiero:hover .sentiero-visual img { transform: scale(1.05); }
+
+.sentiero-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(7,9,26,0.3) 100%);
+  z-index: 1;
+}
+
+.sentiero-number-badge {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 4rem;
+  color: var(--gold-bright);
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.sentiero-content .eyebrow {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.sentiero-content h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.015em;
+}
+
+.sentiero-content h3 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.sentiero-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.15rem;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.sentiero-description {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.sentiero-features {
+  list-style: none;
+  margin-bottom: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.sentiero-features li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.sentiero-features li::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  margin-top: 0.6rem;
+}
+
+.sentiero-price-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.sentiero-price {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--gold-bright);
+  line-height: 1;
+}
+
+.sentiero-price small {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .sentiero { grid-template-columns: 1fr; gap: 2rem; }
+  .sentiero.reverse { direction: ltr; }
+}
+
+/* ========== MAESTRO ========== */
+.maestro {
+  background: var(--bg-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+.maestro::before {
+  content: 'IL MAESTRO';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(8rem, 22vw, 22rem);
+  font-weight: 400;
+  color: rgba(201, 164, 92, 0.025);
+  letter-spacing: -0.02em;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+.maestro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.maestro-image {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-elevated);
+}
+
+.maestro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: contrast(1.05) brightness(0.95);
+}
+
+.maestro-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--line-strong);
+  z-index: 2;
+  pointer-events: none;
+  margin: 1rem;
+}
+
+.maestro-content .eyebrow { display: block; margin-bottom: 1.5rem; }
+
+.maestro-content h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+}
+
+.maestro-content h2 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.maestro-role {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.maestro-content p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  font-weight: 300;
+  max-width: 55ch;
+}
+
+.maestro-content p:last-of-type { margin-bottom: 2.5rem; }
+
+.maestro-quote {
+  border-left: 1px solid var(--gold);
+  padding-left: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.maestro-quote p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--gold-bright);
+  margin: 0 !important;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .maestro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+/* ========== TESTIMONIALS / VOCI ========== */
+.voci {
+  background: var(--bg-base);
+  position: relative;
+}
+
+.voci-intro {
+  text-align: center;
+  max-width: 60ch;
+  margin: 0 auto 5rem;
+}
+
+.voci-intro .eyebrow { display: block; margin-bottom: 1rem; }
+
+.voci-intro h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.5rem;
+}
+
+.voci-intro h2 em { font-style: italic; color: var(--gold-bright); }
+
+.voci-intro-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.voci-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.voce-card {
+  background: var(--bg-card);
+  padding: 3rem;
+  position: relative;
+  border: 1px solid var(--line);
+  transition: border-color 0.4s ease, transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.voce-card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-4px);
+}
+
+.voce-card::before {
+  content: '"';
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 5rem;
+  color: var(--gold);
+  line-height: 1;
+  opacity: 0.4;
+}
+
+.voce-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+  font-weight: 300;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.voce-text mark {
+  background: transparent;
+  color: var(--gold-bright);
+  font-weight: 400;
+}
+
+.voce-attribution {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.voce-initial {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-base);
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.voce-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.voce-detail {
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.voce-card-featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(201, 164, 92, 0.06) 100%);
+  border-color: var(--line-strong);
+  padding: clamp(2.5rem, 5vw, 4rem);
+  position: relative;
+}
+
+.voce-card-featured::before {
+  font-size: 7rem;
+  opacity: 0.5;
+  top: 1rem;
+}
+
+.voce-card-featured .voce-text {
+  font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+  line-height: 1.55;
+}
+
+.voce-card-featured .voce-initial {
+  width: 52px;
+  height: 52px;
+  font-size: 1.4rem;
+}
+
+.voce-card-featured .voce-name { font-size: 1.3rem; }
+
+.voce-card-tag {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.voce-card-tag::before {
+  content: '';
+  width: 36px;
+  height: 1px;
+  background: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .voci-grid { grid-template-columns: 1fr; }
+  .voce-card { padding: 2rem; }
+}
+
+/* ========== LIBRO ========== */
+.libro {
+  background: var(--bg-deep);
+}
+
+.libro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.libro-cover {
+  position: relative;
+  perspective: 1500px;
+}
+
+.libro-cover-inner {
+  background: linear-gradient(135deg, #1a1d3a 0%, #2d1b3d 50%, #1a1d3a 100%);
+  aspect-ratio: 2/3;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border: 1px solid var(--gold-deep);
+  transform: rotateY(-5deg) rotateX(2deg);
+  transition: transform 0.6s ease;
+  box-shadow:
+    -20px 20px 40px rgba(0,0,0,0.5),
+    inset 0 0 80px rgba(201, 164, 92, 0.05);
+  overflow: hidden;
+}
+
+.libro-cover-inner::before {
+  content: '';
+  position: absolute;
+  top: 1rem; right: 1rem; bottom: 1rem; left: 1rem;
+  border: 1px solid rgba(201, 164, 92, 0.2);
+  pointer-events: none;
+}
+
+.libro-cover-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.libro:hover .libro-cover-inner { transform: rotateY(-2deg) rotateX(0deg); }
+
+.libro-cover-eyebrow {
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+}
+
+.libro-cover-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--gold-bright);
+  text-align: center;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.libro-cover-title small {
+  display: block;
+  font-style: normal;
+  font-size: 0.5em;
+  color: var(--text-primary);
+  margin-top: 0.5em;
+  letter-spacing: 0.1em;
+}
+
+.libro-cover-author {
+  text-align: center;
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.libro-content .eyebrow { display: block; margin-bottom: 1.5rem; }
+
+.libro-content h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.5rem;
+}
+
+.libro-content h2 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.libro-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  max-width: 55ch;
+}
+
+.libro-meta {
+  display: flex;
+  gap: 2.5rem;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+
+.libro-meta-item .label {
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.libro-meta-item .value {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--gold-bright);
+}
+
+@media (max-width: 900px) {
+  .libro-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .libro-cover { max-width: 320px; margin: 0 auto; }
+}
+
+/* ========== SANKALPA ========== */
+.sankalpa {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(5rem, 10vw, 9rem) var(--gutter);
+  overflow: hidden;
+}
+
+.sankalpa-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.sankalpa-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sankalpa-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(7,9,26,0.3) 0%, rgba(7,9,26,0.85) 100%);
+}
+
+.sankalpa-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+}
+
+.sankalpa-eyebrow {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  display: block;
+}
+
+.sankalpa-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 1.05;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+}
+
+.sankalpa-quote em {
+  color: var(--gold-bright);
+  font-style: italic;
+}
+
+.sankalpa-meaning {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 50ch;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.sankalpa-divider {
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+  margin: 2rem auto;
+}
+
+/* ========== FINAL CTA ========== */
+.final-cta {
+  background: var(--bg-base);
+  padding: clamp(6rem, 12vw, 10rem) var(--gutter);
+  text-align: center;
+}
+
+.final-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-cta .eyebrow { display: block; margin-bottom: 2rem; }
+
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.final-cta h2 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.final-cta-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: var(--bg-deep);
+  padding: 5rem var(--gutter) 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand-block { max-width: 350px; }
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand img { height: 50px; width: auto; }
+
+.footer-brand-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.footer-brand-text small {
+  display: block;
+  font-family: var(--font-label);
+  font-style: normal;
+  font-size: 0.95rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-top: 0.25rem;
+}
+
+.footer-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 1.05rem;
+}
+
+.footer-col h4 {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.footer-col ul { list-style: none; }
+
+.footer-col li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-col a {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  font-weight: 300;
+}
+
+.footer-col a:hover { color: var(--gold-bright); }
+
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+@media (max-width: 768px) {
+  .footer-main { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* ========== FOOTER LEGAL / DISCLAIMER / DESIGNER ========== */
+.footer-legal-row {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-legal-row .footer-copyright {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  line-height: 1.7;
+  text-align: left;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--gold);
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: var(--gold);
+  color: var(--bg-base);
+  transform: translateY(-2px);
+}
+
+.footer-social svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.footer-legal-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.footer-legal-links a {
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.footer-legal-links a:hover { color: var(--gold-bright); }
+
+.footer-disclaimer {
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  padding: 0 var(--gutter);
+}
+
+.footer-designer {
+  max-width: var(--max-width);
+  margin: 2.5rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.footer-designer em {
+  color: var(--gold);
+  font-style: italic;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  text-transform: none;
+  font-size: 1.15em;
+}
+
+@media (max-width: 768px) {
+  .footer-legal-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .footer-legal-row .footer-copyright { text-align: center; }
+  .footer-social { justify-content: center; }
+  .footer-legal-links { justify-content: center; flex-wrap: wrap; gap: 1.5rem; }
+  .footer-disclaimer { font-size: 0.95rem; line-height: 1.65; margin-top: 2rem; }
+  .footer-designer { font-size: 0.85rem; letter-spacing: 0.22em; margin-top: 2rem; padding-top: 1.5rem; }
+}
+
+/* MOBILE RESPONSIVE · TESTI E LAYOUT */
+@media (max-width: 768px) {
+  /* Gutter più stretto su mobile */
+  :root { --gutter: 1.25rem; }
+
+  /* Nav: brand più compatto e leggibile */
+  .nav { padding: 1rem var(--gutter); }
+  .nav-brand img { height: 32px; }
+  .nav-brand-text { font-size: 0.95rem; letter-spacing: 0.18em; }
+  .nav-brand-text small { font-size: 0.78rem; letter-spacing: 0.22em; }
+  .nav-cta { font-size: 0.95rem; padding: 0.75rem 1.2rem; letter-spacing: 0.14em; }
+
+  /* Eyebrow ovunque più grande su mobile */
+  .eyebrow { font-size: 1.1rem; letter-spacing: 0.32em; }
+
+  /* Section padding ridotto */
+  section { padding: clamp(3.5rem, 8vw, 5rem) var(--gutter); }
+
+  /* Hero: testo più visibile, overlay più scuro */
+  .hero h1 { font-size: clamp(2.4rem, 9vw, 3.5rem); max-width: 16ch; }
+  .hero-tagline { font-size: 1.15rem; max-width: 32ch; margin-top: 1.5rem; }
+  .hero-meta { gap: 1rem; }
+  .hero-meta-line { width: 35px; }
+  .hero-actions { gap: 0.8rem; margin-top: 2rem; }
+  .hero-scroll { display: none; }
+
+  /* Bottoni: full width su mobile per click facile */
+  .btn { padding: 1.05rem 1.5rem; font-size: 0.92rem; letter-spacing: 0.16em; width: 100%; justify-content: center; }
+  .hero-actions .btn { width: 100%; }
+
+  /* Manifesto */
+  .manifesto-meta-title { font-size: 1.1rem; }
+  .manifesto-text p { font-size: clamp(1.35rem, 5vw, 1.75rem); }
+  .manifesto-attribution-text { font-size: 0.95rem; letter-spacing: 0.22em; }
+
+  /* Numbers: griglia 1 colonna piena su small mobile */
+  .number-label { font-size: 1.3rem; letter-spacing: 0.1em; }
+
+  /* Gallery: bento più grande, immagini meno tagliate */
+  .gallery-grid { grid-auto-rows: 200px; gap: 0.6rem; }
+  .gallery-caption { font-size: 0.95rem; letter-spacing: 0.28em; bottom: 1rem; left: 1rem; opacity: 1; transform: translateY(0); }
+
+  /* Sentieri: stack verticale, foto più alta per non tagliare */
+  .sentiero { gap: 1.5rem; padding: 2rem 0; margin-bottom: 3rem; }
+  .sentiero-visual { aspect-ratio: 3/2; }
+  .sentiero-number-badge { font-size: 2.5rem; top: 1rem; left: 1rem; }
+  .sentiero-content h3 { font-size: clamp(2rem, 8vw, 2.5rem); }
+  .sentiero-subtitle { font-size: 1.1rem; }
+  .sentiero-description { font-size: 1.05rem; line-height: 1.7; }
+  .sentiero-features li { font-size: 1.05rem; padding: 0.85rem 0; }
+  .sentiero-price { font-size: 1.6rem; }
+  .sentiero-price small { font-size: 1rem !important; letter-spacing: 0.15em; margin-left: 0.4rem; display: inline-block; }
+
+  /* Maestro: foto landscape + content stack */
+  .maestro-grid { gap: 2rem; }
+  .maestro-image { aspect-ratio: 3/2; }
+  .maestro-image::before { margin: 0.5rem; }
+  .maestro-role { font-size: 1.1rem; margin-bottom: 1.5rem; }
+  .maestro-content p { font-size: 1.05rem; line-height: 1.75; }
+  .maestro-quote p { font-size: 1.2rem; }
+  .maestro::before { font-size: 5rem; }
+
+  /* Voci */
+  .voci-intro { margin-bottom: 3rem; }
+  .voci-intro-text { font-size: 1.1rem; }
+  .voce-card { padding: 1.75rem; }
+  .voce-card-tag { font-size: 0.95rem; letter-spacing: 0.32em; gap: 0.6rem; }
+  .voce-card-tag::before { width: 24px; }
+  .voce-detail { font-size: 0.85rem; letter-spacing: 0.22em; }
+  .voce-name { font-size: 1.05rem; }
+  .voce-card-featured .voce-text { font-size: 1.15rem; }
+  .voce-card-featured .voce-name { font-size: 1.15rem; }
+
+  /* Libro */
+  .libro-grid { gap: 2.5rem; }
+  .libro-cover { max-width: 280px; }
+  .libro-cover-inner { padding: 1.75rem; transform: none; }
+  .libro-cover-eyebrow { font-size: 0.85rem; letter-spacing: 0.35em; }
+  .libro-cover-author { font-size: 0.95rem; letter-spacing: 0.22em; }
+  .libro-content p { font-size: 1.05rem; }
+  .libro-meta { gap: 1.5rem; }
+  .libro-meta-item .label { font-size: 0.85rem; letter-spacing: 0.22em; }
+  .libro-meta-item .value { font-size: 1.05rem; }
+
+  /* Sankalpa: overlay più forte su mobile dove la foto è più invasiva */
+  .sankalpa { min-height: 75vh; }
+  .sankalpa-bg::after {
+    background: radial-gradient(circle at center, rgba(7,9,26,0.55) 0%, rgba(7,9,26,0.92) 100%);
+  }
+  .sankalpa-eyebrow { font-size: 0.95rem; letter-spacing: 0.35em; margin-bottom: 1.75rem; }
+  .sankalpa-quote { font-size: clamp(2.2rem, 11vw, 3.5rem); margin-bottom: 2rem; }
+  .sankalpa-meaning { font-size: 1.1rem; }
+
+  /* Final CTA */
+  .final-cta { padding: 4rem var(--gutter); }
+  .final-cta-text { font-size: 1.1rem; }
+
+  /* Footer mobile compatto ma leggibile */
+  .footer { padding: 3.5rem var(--gutter) 1.5rem; }
+  .footer-main { gap: 2.5rem; margin-bottom: 2.5rem; }
+  .footer-brand img { height: 42px; }
+  .footer-brand-text { font-size: 1.25rem; }
+  .footer-brand-text small { font-size: 0.85rem; letter-spacing: 0.22em; }
+  .footer-tagline { font-size: 0.98rem; line-height: 1.7; }
+  .footer-col h4 { font-size: 0.95rem; letter-spacing: 0.32em; margin-bottom: 1rem; }
+  .footer-col li { margin-bottom: 0.65rem; }
+  .footer-col a { font-size: 1.05rem; }
+  .footer-bottom p { font-size: 0.85rem; letter-spacing: 0.22em; line-height: 1.7; }
+  .footer-disclaimer { font-size: 0.95rem !important; }
+  .footer-legal-links { font-size: 0.95rem !important; }
+}
+
+/* Schermi molto piccoli (~iPhone SE) */
+@media (max-width: 380px) {
+  :root { --gutter: 1rem; }
+  .hero h1 { font-size: 2.2rem; }
+  .hero-tagline { font-size: 1.05rem; }
+  .btn { font-size: 0.85rem; padding: 0.95rem 1.2rem; letter-spacing: 0.14em; }
+  .sentiero-content h3 { font-size: 1.85rem; }
+  .voce-card { padding: 1.4rem; }
+}
+
+/* ========== UTILITIES ========== */
+.divider-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.divider-mark::before, .divider-mark::after {
+  content: '';
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: var(--line);
+}
+
+.divider-mark span {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.5em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+
+/* ================================================== */
+/* IL NIDRISTA · landing page custom styles */
+/* ================================================== */
+
+/* Page-specific layout */
+.page-il-nidrista section { padding: clamp(5rem, 10vw, 8rem) var(--gutter); }
+.section-narrow { max-width: 880px; margin: 0 auto; }
+
+/* Chapter marks (numerazione romana stile sito) */
+.chapter-mark {
+  display: block;
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Hero della landing (più semplice della home) */
+.hero-nidrista {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem var(--gutter) 6rem;
+  background:
+    radial-gradient(ellipse at top, rgba(45, 27, 61, 0.4) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(201, 164, 92, 0.08) 0%, transparent 70%),
+    var(--bg-base);
+  overflow: hidden;
+  text-align: center;
+}
+.hero-nidrista::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(232, 211, 168, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(201, 164, 92, 0.06), transparent 40%);
+  pointer-events: none;
+}
+.hero-nidrista .hero-corner-mark {
+  position: absolute;
+  top: 7rem;
+  right: var(--gutter);
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  color: var(--gold-deep);
+  opacity: 0.7;
+}
+.hero-nidrista-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+.hero-nidrista .eyebrow {
+  display: block;
+  margin-bottom: 2.5rem;
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.hero-nidrista h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+}
+.hero-nidrista h1 em {
+  font-style: italic;
+  color: var(--gold-bright);
+  font-weight: 400;
+}
+.hero-nidrista-tagline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  line-height: 1.55;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  font-weight: 300;
+  font-style: italic;
+}
+.hero-nidrista-actions {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Sezioni di prosa (manifesto, chi sono) */
+.section-prose .prose {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  line-height: 1.85;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+.section-prose .prose p {
+  margin-bottom: 1.6rem;
+}
+.section-prose .prose p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 400;
+  float: left;
+  line-height: 0.85;
+  margin: 0.4rem 0.6rem 0 0;
+  color: var(--gold);
+}
+.section-prose h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+}
+.section-prose h2 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+/* Features grid (Cosa ricevi) */
+.section-features { background: var(--bg-elevated); }
+.section-features h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin-bottom: 3.5rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+.section-features h2 em { font-style: italic; color: var(--gold-bright); }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-top: 1px solid var(--line-strong);
+  padding: 2.5rem 2rem;
+  border-radius: 2px;
+  transition: border-color 0.4s ease, transform 0.4s ease;
+}
+.feature-card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-3px);
+}
+.feature-card h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: var(--gold-bright);
+  margin-bottom: 1rem;
+}
+.feature-card p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+/* Filter blocks (Per chi è / non è) */
+.section-filter h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin-bottom: 3.5rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+.section-filter h2 em { font-style: italic; color: var(--gold-bright); }
+.filter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 760px) {
+  .filter-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+.filter-block { padding: 2.5rem; border-radius: 2px; }
+.filter-yes {
+  background: linear-gradient(180deg, rgba(201, 164, 92, 0.06), rgba(201, 164, 92, 0.02));
+  border: 1px solid var(--line-strong);
+  border-top: 2px solid var(--gold);
+}
+.filter-no {
+  background: rgba(245, 241, 232, 0.02);
+  border: 1px solid var(--line);
+}
+.filter-block h3 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+.filter-yes h3 { color: var(--gold-bright); }
+.filter-block ul {
+  list-style: none;
+  padding: 0;
+}
+.filter-block ul li {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  padding: 0.9rem 0 0.9rem 1.8rem;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  font-weight: 300;
+}
+.filter-block ul li:last-child { border-bottom: none; }
+.filter-yes ul li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 1.6rem;
+  line-height: 1.2;
+  top: 0.6rem;
+}
+.filter-no ul li::before {
+  content: '×';
+  position: absolute;
+  left: 0;
+  color: var(--gold-deep);
+  font-size: 1.1rem;
+  top: 0.95rem;
+  opacity: 0.6;
+}
+
+/* Voci d'elezione (testimonianze) */
+.section-voices { background: var(--bg-elevated); }
+.section-voices h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin-bottom: 3.5rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+.section-voices h2 em { font-style: italic; color: var(--gold-bright); }
+.voices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.voice-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 2.5rem 2rem;
+  border-radius: 2px;
+  position: relative;
+}
+.voice-letter {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 3.5rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+.voice-card blockquote {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0 0 1.8rem 0;
+  padding: 0;
+  border: none;
+  font-weight: 300;
+}
+.voice-card cite {
+  font-style: normal;
+  display: block;
+  border-top: 1px solid var(--line);
+  padding-top: 1.2rem;
+}
+.voice-card cite strong {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.voice-card cite small {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+
+/* Author section (Chi sono) */
+.section-author h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+}
+.section-author h2 em { font-style: italic; color: var(--gold-bright); }
+
+/* FAQ */
+.section-faq h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+.section-faq h2 em { font-style: italic; color: var(--gold-bright); }
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 2rem 0;
+}
+.faq-item:first-child { border-top: 1px solid var(--line); }
+.faq-item h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.35rem;
+  line-height: 1.3;
+  color: var(--text-primary);
+  margin-bottom: 0.8rem;
+}
+.faq-item p {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+/* CTA finale */
+.section-cta-final {
+  background:
+    radial-gradient(ellipse at center, rgba(201, 164, 92, 0.1) 0%, transparent 60%),
+    var(--bg-deep);
+  text-align: center;
+}
+.section-cta-final h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.8rem;
+  color: var(--gold-bright);
+}
+.section-cta-final .cta-lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.55;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto 3.5rem;
+  font-weight: 300;
+  font-style: italic;
+}
+.pricing-block {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem 3.5rem;
+  background: rgba(201, 164, 92, 0.04);
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+}
+.price-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 1;
+  color: var(--gold-bright);
+  letter-spacing: -0.02em;
+}
+.price-display small {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-dim);
+  display: block;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+.btn-large {
+  font-size: 1rem;
+  padding: 1.3rem 2.8rem;
+  letter-spacing: 0.1em;
+}
+.pricing-note {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+/* Inline em styling in body prose */
+.section-prose .prose em,
+.feature-card p em,
+.filter-block ul li em,
+.faq-item p em {
+  font-style: italic;
+  color: var(--gold-bright);
+  font-weight: inherit;
+}
+
+/* Spacing under nav */
+body.page-il-nidrista { padding-top: 0; }
+
+
+/* ========== STICKY MOBILE CTA ========== */
+.sticky-mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 999;
+  background: var(--gold);
+  color: var(--night);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 20px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: background 0.2s ease;
+}
+.sticky-mobile-cta:hover { background: #d8b46c; }
+.sticky-mobile-cta .arrow { font-size: 1.1em; }
+
+@media (max-width: 768px) {
+  .sticky-mobile-cta { display: flex; }
+  footer { padding-bottom: 100px !important; }
+}
+
+
+/* ========== FONT: Playfair Display per i titoli ========== */
+:root { --font-display: "Playfair Display", serif; }
+h1, h2, h3, h4,
+.display-xxl, .display-xl, .display-l,
+.manifesto-text p,
+.price-display,
+.nav-brand-text,
+.footer-brand-text { font-family: "Playfair Display", serif !important; }
+
+/* ========== HAMBURGER + MOBILE MENU ========== */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 200;
+  flex-shrink: 0;
+}
+.nav-hamburger span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--gold, #c9a45c);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  transform-origin: center;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+@media (max-width: 900px) {
+  .nav-hamburger { display: flex; }
+  .nav-links { display: none !important; }
+}
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 150;
+  background: rgba(7, 9, 26, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 5rem 2rem 3rem;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a {
+  font-family: var(--font-display, "Playfair Display", serif);
+  font-size: clamp(1.3rem, 4.5vw, 1.9rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #f5f1e8;
+  text-decoration: none;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(201, 164, 92, 0.12);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+.nav-mobile-menu a:last-child { border-bottom: none; }
+.nav-mobile-menu a:hover { color: #c9a45c; }
+.nav-mobile-free {
+  background: #c9a45c;
+  color: #0a0c1f;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.nav-old {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  background: rgba(7,9,26,.6);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(201,164,92,.1);
+}
+</style>
+</head>
+
+<body class="page-il-nidrista">
+
+<!-- ========== NAV ========== -->
+<nav class="nav" id="nav">
+  <a href="/" class="nav-brand">
+    <img src="images/logo.png" alt="Yoga Nidra Italia™">
+    <span class="nav-brand-text">Yoga Nidra Italia™<small>Il Sonno dei Re™ · Est. 2001</small></span>
+  </a>
+  <div class="nav-links">
+    <a href="/la-caverna">La Caverna <span style="background:var(--gold);color:#0a0c1f;font-size:.6rem;font-weight:700;letter-spacing:.08em;padding:2px 6px;border-radius:3px;margin-left:4px;vertical-align:middle;">GRATIS</span></a>
+    <a href="/il-nidrista">Il Nidrista™</a>
+    <a href="/il-sonno-dei-re">Il Sonno dei Re™</a>
+    <a href="/audioyoga-studio">AudioYoga Studio™</a>
+    <a href="/the-spiral">The Spiral</a>
+    <a href="/pratica-del-giovedi">Pratica del Giovedì</a>
+    <a href="/ritiro-solstizio">Ritiro del Solstizio</a>
+  </div>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile-menu" id="navMobileMenu">
+  <a href="/la-caverna">La Caverna del Cuore <span class="nav-mobile-free">GRATIS</span></a>
+  <a href="/il-nidrista">Il Nidrista™</a>
+  <a href="/il-sonno-dei-re">Il Sonno dei Re™</a>
+  <a href="/audioyoga-studio">AudioYoga Studio™</a>
+  <a href="/the-spiral">The Spiral</a>
+  <a href="/pratica-del-giovedi">Pratica del Giovedì</a>
+  <a href="/ritiro-solstizio">Ritiro del Solstizio</a>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero-nidrista">
+  <div class="hero-corner-mark">EST · MMI</div>
+  <div class="hero-nidrista-content">
+    <span class="eyebrow">Yoga Nidra Italia™ · Yoga Nidra Integrato™</span>
+    <h1>Il <em>Nidrista™</em></h1>
+    <p class="hero-nidrista-tagline">
+      Il canale di pratica per chi non vuole più cercare. Decine di audio originali, unici, introvabili altrove, guidati dalla mia voce, registrati dal vivo con l'energia vera del momento. Per fare di Yoga Nidra Integrato™ una disciplina che puoi praticare sempre, non un esperimento occasionale.
+    </p>
+    <div class="hero-nidrista-actions">
+      <a href="#iniziare" class="btn btn-primary">Entra nel Nidrista™ <span class="arrow">→</span></a>
+      <a href="#manifesto" class="btn btn-ghost">Il Manifesto <span class="arrow">↓</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== I · MANIFESTO ========== -->
+<section id="manifesto" class="section-prose">
+  <div class="section-narrow reveal">
+    <span class="chapter-mark">I · Il Manifesto</span>
+    <h2>Perché ho creato <em>Il Nidrista™</em></h2>
+    <div class="prose">
+      <p>Per anni ho visto persone arrivare allo Yoga Nidra come si arriva a una promessa: con curiosità, con bisogno, a volte con disperazione. E ho visto le stesse persone perdersi. Non perché lo Yoga Nidra non funzionasse. Ma perché mancava la cosa che rende efficace qualsiasi pratica: la continuità.</p>
+
+      <p>Una sessione ogni tanto è un'esperienza. Una sessione ogni settimana, o ogni giorno, è una trasformazione.</p>
+
+      <p>Il canale Il Nidrista™ nasce per questo. Non è una "libreria" di audio. Non è un corso. È un appuntamento, uno solo, costruito con cura, che entra nella tua vita come entrano le cose serie: con discrezione e con costanza.</p>
+
+      <p>Le pratiche sono registrate durante vere lezioni dal vivo, una alla volta, ognuna con un'intenzione precisa. Seguono il metodo dello <em>Yoga Nidra Integrato™</em>, che ho sviluppato in più di 25 anni di pratica e che integra la tradizione di Satyananda con innumerevoli accorgimenti, migliorie, tecniche e aggiornamenti dalle neuroscienze.</p>
+
+      <p>Non troverai musica di sottofondo invadente. Quando incontri il vero Silenzio nella tua vita quotidiana? Non troverai voci impostate, né promesse di "magie in trenta giorni". Troverai una voce, un silenzio, e un luogo dentro di te che esisteva già prima che lo cercassi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== II · COSA RICEVI ========== -->
+<section id="cosa-ricevi" class="section-features">
+  <div class="reveal">
+    <div class="section-narrow" style="text-align:center; margin-bottom: 3.5rem;">
+      <span class="chapter-mark">II · Cosa Ricevi</span>
+      <h2>Cosa entra a far parte della tua <em>pratica</em></h2>
+    </div>
+    <div class="features-grid">
+      <article class="feature-card">
+        <h3>Decine di audio originali</h3>
+        <p>Non parti da zero: dal momento in cui ti iscrivi entri in un archivio di sessioni di <em>Yoga Nidra Integrato™</em> registrate negli anni durante vere lezioni dal vivo. Audio che non troverai da nessun'altra parte. Niente YouTube, niente Spotify, niente app generaliste. Solo qui.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Una pratica quando vuoi</h3>
+        <p>Ogni sessione è costruita con cura, con un'intenzione precisa. Nessuna pubblicazione commerciale, nessun calendario editoriale gonfiato per giustificare il prezzo.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Registrate dal vivo</h3>
+        <p>La differenza si sente. Quando guido una sessione davanti a persone reali, in una stanza reale, l'energia che entra nella voce è un'altra cosa. Magari non è "acusticamente perfetta", ma non è neanche un audio pulito e sterile di laboratorio. È una pratica viva, con il respiro di chi era lì quel giorno.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Sempre con te</h3>
+        <p>Ascolti le sessioni dove vuoi, come vuoi, anche offline. Quello che hai ascoltato viene registrato dalle tue cellule e dal tuo sistema interno: anche se un giorno decidi di interrompere l'abbonamento, il "sentire" di <em>Yoga Nidra Integrato™</em> sarà per sempre tuo.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Una breve introduzione scritta</h3>
+        <p>Accompagna alcune sessioni: ti spiego al meglio l'intenzione della pratica, come prepararti, cosa osservare durante e dopo.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Accesso privilegiato</h3>
+        <p>In quanto nidrista ricevi anche: accesso prioritario alle live su Zoom quando le organizzo, messaggi riservati sul canale Telegram dei nidristi, e sconti dedicati sui ritiri di <em>Yoga Nidra Italia™</em>.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== III · PER CHI È / NON È ========== -->
+<section id="per-chi" class="section-filter">
+  <div class="reveal">
+    <div class="section-narrow" style="text-align:center; margin-bottom: 3.5rem;">
+      <span class="chapter-mark">III · È per te?</span>
+      <h2>Il <em>Nidrista™</em> è per te se…</h2>
+    </div>
+    <div class="filter-grid">
+      <div class="filter-block filter-yes">
+        <h3>È pensato per te</h3>
+        <ul>
+          <li>Hai già incontrato lo Yoga Nidra, anche solo una volta, e hai sentito che lì c'era "qualcosa" di vero da approfondire.</li>
+          <li>Sei stanco di accumulare audio gratuiti che poi non ascolti, e vuoi un appuntamento solo, fatto bene, che ti accompagna ogni volta che vuoi.</li>
+          <li>Cerchi uno spazio di pratica privato, senza performance, senza community rumorose, senza spinte motivazionali. In completa autonomia e silenzio. Quello vero.</li>
+          <li>Accetti che la trasformazione abbia i suoi tempi e non si misuri in like o in vestiti esotici.</li>
+          <li>Vuoi pratiche vere e uniche, che non trovi altrove. Non versioni edulcorate di Yoga Nidra confezionate per le piattaforme di massa da insegnanti che lo considerano un "semplice rilassamento", ignorando il vero potenziale di YNI.</li>
+        </ul>
+      </div>
+      <div class="filter-block filter-no">
+        <h3>Non è per te se</h3>
+        <ul>
+          <li>Cerchi una libreria infinita di contenuti da consumare. Qui ce ne sono decine, ma li ascolterai uno alla volta, per scelta. Anche perché questi audio ti toccheranno corde mai toccate prima.</li>
+          <li>Vuoi risultati garantiti in tempi definiti. Lo <em>Yoga Nidra Integrato™</em> non funziona così, e io non te lo venderò così. Non è una performance, non ci sono posizioni acrobatiche. Qui ci sei solo tu, col tuo vero Essere e con te stesso.</li>
+          <li>Stai attraversando un momento clinico o psicologico pesante. In quel caso, orientati prima per ricevere aiuto da un terapeuta. Poi, se vuoi, pratica anche <em>Yoga Nidra Integrato™</em>. Non consiglio di delegare la tua guarigione, o di confondere l'occuparsi di te stesso, solo ed esclusivamente a YNI.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== IV · VOCI D'ELEZIONE ========== -->
+<section id="voci" class="section-voices">
+  <div class="reveal">
+    <div class="section-narrow" style="text-align:center; margin-bottom: 3.5rem;">
+      <span class="chapter-mark">IV · Voci d'Elezione</span>
+      <h2>Le voci di chi <em>pratica</em>: testimonianze</h2>
+    </div>
+    <div class="voices-grid">
+      <article class="voice-card">
+        <div class="voice-letter">G</div>
+        <blockquote>"Caro Danilo, sto cominciando a notare un cambiamento nella qualità del sonno. Per me è sempre stato un problema. Ma da qualche giorno il sonno è diventato quasi 'amico'. Spesso le tue parole mi passano come immagini nella mente e mi tranquillizzano. Sento già dei cambiamenti anche nella mia pratica e nel modo in cui la trasmetto. Sento più centratura e più morbidezza nell'immobilità. E tanta gioia."</blockquote>
+        <cite>
+          <strong>Giada</strong>
+          <small>Insegnante Hatha Yoga · Studente YNI</small>
+        </cite>
+      </article>
+      <article class="voice-card">
+        <div class="voice-letter">V</div>
+        <blockquote>"Sono commossa dalle tue parole. Ho iniziato a navigare nel corpo senza aspettarmi niente di che, e invece ci sono stata senza particolare sforzo e per un tempo prolungato. Adesso so che è un luogo a cui posso tornare quando voglio. Quando hai detto di visualizzare la luce come stelle, si è spalancato il cielo stellato sopra di me. Sembrava proprio lì."</blockquote>
+        <cite>
+          <strong>Valentina</strong>
+          <small>Praticante</small>
+        </cite>
+      </article>
+      <article class="voice-card">
+        <div class="voice-letter">P</div>
+        <blockquote>"Yoga Nidra è un sentiero per arrivare al mio io profondo, dal quale attingere le energie, la resilienza per accettare e percorrere la mia strada verso casa. Ognuno ha la propria casa da raggiungere: il senso della propria vita."</blockquote>
+        <cite>
+          <strong>Pierluigi T.</strong>
+          <small>Workshop</small>
+        </cite>
+      </article>
+      <article class="voice-card">
+        <div class="voice-letter">S</div>
+        <blockquote>"A livello razionale non saprei dire, ma posso dirti che qualcosa di buono succede dopo la pratica. È come se fossi più tranquillo, appagato, sorridente. Il mio lavoro è pesante, alto stress. La tensione non riesco a scioglierla, nemmeno con le lezioni di yoga, ma Nidra mi tocca molto."</blockquote>
+        <cite>
+          <strong>Stevens B.</strong>
+          <small>Workshop</small>
+        </cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== V · CHI SONO ========== -->
+<section id="maestro" class="section-author section-prose">
+  <div class="section-narrow reveal">
+    <span class="chapter-mark">V · Il Maestro</span>
+    <h2><em>Danilo Ratti</em></h2>
+    <div class="prose">
+      <p>Pratico e insegno Yoga Nidra da più di 25 anni. Ho sviluppato <em>Yoga Nidra Integrato™</em> unendo la tradizione di Satyananda, da cui vengo, agli accorgimenti, alle migliorie e ai contributi di innumerevoli altri yoga, scoperte delle neuroscienze, esperienze e culture, maturati in oltre due decenni di lezioni, ritiri e ascolto delle persone che ho avuto davanti.</p>
+
+      <p>Il Nidrista™ è il modo in cui questo lavoro arriva fino a casa tua, senza intermediari. Ci sarà la mia voce ad accompagnarti, ma poi lo spazio è tuo: io sarò il "narratore fuori campo", tu sarai il protagonista.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== VI · FAQ ========== -->
+<section id="faq" class="section-faq">
+  <div class="reveal">
+    <div class="section-narrow" style="text-align:center; margin-bottom: 3rem;">
+      <span class="chapter-mark">VI · Domande</span>
+      <h2>Domande <em>ricorrenti</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Quanto costa l'abbonamento?</h3>
+        <p>€29 al mese. Pagamento via Gumroad, in totale sicurezza.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Posso disdire quando voglio?</h3>
+        <p>Sì. L'abbonamento si rinnova mensilmente, lo interrompi quando vuoi, senza dover giustificare nulla.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Quanto dura ogni sessione?</h3>
+        <p>Alcune dai 10 ai 15 minuti, altre dai 30 ai 65 minuti, a seconda dell'intenzione. Alcune sono brevi e dirette, altre più lunghe e profonde.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Devo essere esperto di yoga o meditazione?</h3>
+        <p>No. Lo <em>Yoga Nidra Integrato™</em> si pratica sdraiati, con una voce che ti guida. Non serve flessibilità, postura, esperienza. Serve solo un momento in cui nessuno ti disturbi.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Cosa succede quando mi iscrivo?</h3>
+        <p>Ricevi subito accesso all'archivio completo delle decine di sessioni già pubblicate, e le eventuali nuove sessioni man mano che arriveranno.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Perché le pratiche sono registrate dal vivo e non in studio?</h3>
+        <p>Perché lo <em>Yoga Nidra Integrato™</em> è una pratica relazionale: quando guido davanti a persone reali, la voce trova un ritmo, un respiro, una qualità di presenza che in studio non arriva. Le registrazioni live conservano quell'energia. È una scelta consapevole, non un compromesso tecnico.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Posso scaricare gli audio?</h3>
+        <p>No. Sono talmente potenti che voglio tutelarne la diffusione, e sono protetti dal diritto d'autore. Ma hai il completo accesso al canale e puoi ascoltarli quando vuoi e dove vuoi. Sono sempre con te.</p>
+      </div>
+      <div class="faq-item">
+        <h3>C'è una garanzia?</h3>
+        <p>Sì. 30 giorni "soddisfatto o rimborsato". Se entro 30 giorni dall'iscrizione senti che non fa per te, ti restituisco l'intero importo senza domande.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== VII · CTA FINALE ========== -->
+<section id="iniziare" class="section-cta-final">
+  <div class="reveal">
+    <span class="chapter-mark">VII · Iniziare</span>
+    <h2>Iniziare</h2>
+    <p class="cta-lead">Decine di sessioni che ti aspettano. Una voce, un silenzio, un appuntamento con te stesso che non salti più.</p>
+    <div class="pricing-block">
+      <div class="price-display">€29<small>al mese</small></div>
+      <a href="https://yoganidraitalia.gumroad.com/l/nidrista29" class="btn btn-primary btn-large" target="_blank" rel="noopener">Entra nel Nidrista™ <span class="arrow">→</span></a>
+      <p class="pricing-note">Disdici quando vuoi · 30 giorni soddisfatto o rimborsato</p>
+      <p class="pricing-note" style="margin-top: 0.6rem; opacity: 0.65;">Pagamento sicuro su Gumroad, la nostra piattaforma ufficiale. L'importo apparirà convertito in dollari, il prezzo non cambia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-main">
+
+    <div class="footer-brand-block">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="YNI">
+        <div class="footer-brand-text">Yoga Nidra Italia™<small>Il Sonno dei Re™ · Est. 2001</small></div>
+      </div>
+      <p class="footer-tagline">
+        La pratica autentica dello yoga del risveglio e del sonno consapevole. In italiano, dalle fonti, integrato e aggiornato, libero, senza dogmi e senza compromessi.
+      </p>
+    </div>
+
+    <div class="footer-col">
+            <h4>Sentieri</h4>
+      <ul>
+        <li><a href="/la-caverna">La Caverna del Cuore</a></li>
+        <li><a href="/il-nidrista">Il Nidrista™</a></li>
+        <li><a href="/il-sonno-dei-re">Il Sonno dei Re™</a></li>
+        <li><a href="/audioyoga-studio">AudioYoga Studio™</a></li>
+        <li><a href="/the-spiral">The Spiral</a></li>
+        <li><a href="/pratica-del-giovedi">Pratica del Giovedì</a></li>
+        <li><a href="/ritiro-solstizio">Ritiro del Solstizio</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contatto</h4>
+      <ul>
+        <li><a href="mailto:info@yoganidraitalia.it">info@yoganidraitalia.it</a></li>
+        <li><a href="mailto:danilo@yoganidraitalia.it">danilo@yoganidraitalia.it</a></li>
+        <li><a href="https://t.me/yoganidraitalia" target="_blank" rel="noopener">Canale Telegram</a></li>
+        <li><a href="https://yoganidraitalia.gumroad.com" target="_blank" rel="noopener">Catalogo Gumroad</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+    <div class="footer-legal-row">
+    <p class="footer-copyright">© 2026 Danilo Ratti · Yoga Nidra Italia™ · P.IVA 04440360164</p>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/yoganidraitalia" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/yoganidraitalia" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+      <a href="https://t.me/yoganidraitalia" target="_blank" rel="noopener" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.464.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </a>
+    </div>
+    <div class="footer-legal-links">
+      <a href="https://www.facebook.com/yoganidraitalia" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/yoganidraitalia" target="_blank" rel="noopener">Instagram</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/cookies">Cookies</a>
+    </div>
+  </div>
+
+  <p class="footer-disclaimer">
+    Tutti i contenuti multimediali (audio, video, ebook, ecc.) presenti su questo sito hanno il solo fine di divulgare la conoscenza dello Yoga Nidra e di stimolare la pratica personale, fornendo strumenti di studio e di approfondimento. Non sono in alcun modo da considerarsi un suggerimento medico o psicologico, né uno strumento terapeutico.
+  </p>
+
+  <div class="footer-designer">
+    Proudly <em>SelfDesigned</em>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+reveals.forEach(el => observer.observe(el));
+</script>
+
+<script defer src="/assets/cookieconsent/cookieconsent.umd.js"></script>
+<script defer src="/assets/cookieconsent/cc-config.js"></script>
+
+<!-- ========== STICKY MOBILE CTA ========== -->
+<a href="https://yoganidraitalia.gumroad.com/l/nidrista29" class="sticky-mobile-cta" aria-label="Entra nel Nidrista™">
+  <span>Entra nel Nidrista™</span>
+  <span class="arrow">→</span>
+</a>
+
+<script>
+(function(){
+  var btn = document.getElementById("navHamburger");
+  var menu = document.getElementById("navMobileMenu");
+  if(!btn || !menu) return;
+  btn.addEventListener("click", function(){
+    var open = menu.classList.toggle("open");
+    btn.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+  menu.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){
+      menu.classList.remove("open");
+      btn.classList.remove("open");
+      btn.setAttribute("aria-expanded","false");
+      document.body.style.overflow = "";
+    });
+  });
+})();
+</script>
+</body>
+</html>

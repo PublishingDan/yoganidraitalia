@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/cookieconsent/cookieconsent.css">
+<link rel="stylesheet" href="/assets/cookieconsent/cc-branding.css">
+<title>Yoga Nidra Italia™ · Il Sonno dei Re™ - Danilo Ratti</title>
+<meta name="description" content="La pratica del sonno consapevole. Yoga Nidra autentico con Danilo Ratti. Audio guidati, percorsi 1:1, formazione e libri per esplorare il limbo tra veglia e sonno.">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #07091a;
+  --bg-base: #0a0c1f;
+  --bg-elevated: #131630;
+  --bg-card: #181b35;
+  --gold: #c9a45c;
+  --gold-bright: #e8d3a8;
+  --gold-deep: #8b7038;
+  --purple-deep: #2d1b3d;
+  --text-primary: #f5f1e8;
+  --text-muted: #ede8da;
+  --text-dim: #d4cdb8;
+  --line: rgba(245, 241, 232, 0.08);
+  --line-strong: rgba(201, 164, 92, 0.25);
+
+  --font-display: 'Playfair Display', serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-label: 'Italiana', serif;
+
+  --max-width: 1440px;
+  --gutter: clamp(1.5rem, 4vw, 4rem);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  body { font-size: 17px; line-height: 1.7; }
+}
+
+::selection { background: var(--gold); color: var(--bg-base); }
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ========== TYPOGRAPHY ========== */
+.eyebrow {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.display-xxl {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3rem, 9vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.display-xl {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+}
+
+.display-l {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 4.5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.serif-quote {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.4;
+  letter-spacing: 0.005em;
+}
+
+.italic { font-style: italic; }
+
+/* ========== NAV ========== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.5rem var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.nav.scrolled {
+  background: rgba(7, 9, 26, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: var(--line);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.nav-brand img { height: 36px; width: auto; }
+
+.nav-brand-text {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.nav-brand-text small {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  display: block;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+.nav-cta {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--bg-base);
+  background: var(--gold);
+  padding: 0.95rem 1.8rem;
+  border-radius: 2px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-cta:hover { background: var(--gold-bright); transform: translateY(-1px); }
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+}
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(201, 164, 92, 0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(139, 112, 56, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #07091a 0%, #0a0c1f 50%, #07091a 100%);
+}
+
+.hero-bg img {
+  display: none;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 100%, rgba(7,9,26,0.4) 0%, transparent 70%);
+}
+
+.hero-noise {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.05;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  animation: fadeUp 1s ease 0.3s both;
+}
+
+.hero-meta .eyebrow { color: var(--gold); }
+
+.hero-meta-line {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.75rem, 8.5vw, 7.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  max-width: 14ch;
+  animation: fadeUp 1.1s ease 0.5s both;
+}
+
+.hero h1 em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold-bright);
+}
+
+.hero-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  color: var(--text-muted);
+  max-width: 38ch;
+  margin-top: 2rem;
+  line-height: 1.5;
+  animation: fadeUp 1.1s ease 0.8s both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  animation: fadeUp 1.1s ease 1.1s both;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.4rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--bg-base);
+}
+
+.btn-primary:hover {
+  background: var(--gold-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(201, 164, 92, 0.5);
+}
+
+.btn-ghost {
+  border-color: rgba(245, 241, 232, 0.25);
+  color: var(--text-primary);
+  background: rgba(245, 241, 232, 0.03);
+  backdrop-filter: blur(8px);
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201, 164, 92, 0.05);
+}
+
+.btn .arrow { display: inline-block; transition: transform 0.3s ease; }
+.btn:hover .arrow { transform: translateX(4px); }
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+  animation: fadeIn 1s ease 1.5s both;
+}
+
+.hero-scroll-text {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 50px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0%, 100% { transform: scaleY(1); transform-origin: top; }
+  50% { transform: scaleY(0.3); transform-origin: top; }
+}
+
+.hero-corner-mark {
+  position: absolute;
+  top: 50%;
+  right: var(--gutter);
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: right center;
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.5em;
+  color: var(--gold);
+  text-transform: uppercase;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .hero-corner-mark { display: none; }
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s ease, transform 1s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ========== SECTION BASE ========== */
+section { padding: clamp(5rem, 10vw, 9rem) var(--gutter); position: relative; }
+.container { max-width: var(--max-width); margin: 0 auto; }
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+  flex-wrap: wrap;
+}
+
+.section-number {
+  font-family: var(--font-label);
+  font-size: 1.1rem;
+  letter-spacing: 0.5em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ========== MANIFESTO ========== */
+.manifesto {
+  background: var(--bg-base);
+  position: relative;
+}
+
+.manifesto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--gutter);
+  right: var(--gutter);
+  height: 1px;
+  background: var(--line);
+}
+
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.manifesto-meta {
+  position: sticky;
+  top: 6rem;
+}
+
+.manifesto-meta .eyebrow { display: block; margin-bottom: 1.5rem; }
+
+.manifesto-meta-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.manifesto-text p {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  margin-bottom: 1.5em;
+  color: var(--text-primary);
+}
+
+.manifesto-text p em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.manifesto-text p:last-child { margin-bottom: 0; }
+
+.manifesto-attribution {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.manifesto-attribution-line {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.manifesto-attribution-text {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .manifesto-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .manifesto-meta { position: static; }
+}
+
+/* ========== NUMBERS ========== */
+.numbers {
+  background: linear-gradient(180deg, var(--bg-base) 0%, var(--bg-deep) 100%);
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.number-cell {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-right: 1px solid var(--line);
+  position: relative;
+  transition: background 0.4s ease;
+}
+
+.number-cell:last-child { border-right: none; }
+.number-cell:hover { background: rgba(201, 164, 92, 0.03); }
+
+.number-value {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  color: var(--gold-bright);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.number-value sup {
+  font-size: 0.4em;
+  vertical-align: super;
+  color: var(--gold);
+  font-style: italic;
+}
+
+.number-label {
+  font-family: var(--font-label);
+  font-size: 2.1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+  .number-cell:nth-child(2) { border-right: none; }
+  .number-cell:nth-child(1), .number-cell:nth-child(2) { border-bottom: 1px solid var(--line); }
+}
+
+/* ========== GALLERY BENTO ========== */
+.gallery {
+  background: var(--bg-deep);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 220px;
+  gap: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  cursor: pointer;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  filter: grayscale(40%) brightness(0.85);
+}
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(7,9,26,0.6) 100%);
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+  filter: grayscale(0%) brightness(1);
+}
+
+.gallery-item:hover::after { opacity: 0; }
+
+.gallery-item-1 { grid-column: span 4; grid-row: span 2; }
+.gallery-item-2 { grid-column: span 2; grid-row: span 1; }
+.gallery-item-3 { grid-column: span 2; grid-row: span 1; }
+.gallery-item-4 { grid-column: span 2; grid-row: span 2; }
+.gallery-item-5 { grid-column: span 2; grid-row: span 1; }
+.gallery-item-6 { grid-column: span 2; grid-row: span 1; }
+
+.gallery-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 2;
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-caption { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+  .gallery-item-1 { grid-column: span 2; grid-row: span 2; }
+  .gallery-item-2, .gallery-item-3, .gallery-item-4, .gallery-item-5, .gallery-item-6 { grid-column: span 1; grid-row: span 1; }
+}
+
+/* ========== SENTIERI (Products) ========== */
+.sentieri {
+  background: var(--bg-base);
+  position: relative;
+}
+
+.sentieri-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+  align-items: end;
+}
+
+.sentieri-intro h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+}
+
+.sentieri-intro h2 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.sentieri-intro-text {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 50ch;
+}
+
+@media (max-width: 900px) {
+  .sentieri-intro { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.sentiero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  align-items: center;
+  padding: 3rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.sentiero:last-of-type { border-bottom: 1px solid var(--line); margin-bottom: 0; }
+
+.sentiero.reverse { direction: rtl; }
+.sentiero.reverse > * { direction: ltr; }
+
+.sentiero-visual {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--bg-elevated);
+}
+
+.sentiero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: brightness(0.9) contrast(1.1);
+  transition: transform 1s ease;
+}
+
+.sentiero:hover .sentiero-visual img { transform: scale(1.05); }
+
+.sentiero-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(7,9,26,0.3) 100%);
+  z-index: 1;
+}
+
+.sentiero-number-badge {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 4rem;
+  color: var(--gold-bright);
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.sentiero-content .eyebrow {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.sentiero-content h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.015em;
+}
+
+.sentiero-content h3 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.sentiero-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.15rem;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.sentiero-description {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.sentiero-features {
+  list-style: none;
+  margin-bottom: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.sentiero-features li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.sentiero-features li::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  margin-top: 0.6rem;
+}
+
+.sentiero-price-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.sentiero-price {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--gold-bright);
+  line-height: 1;
+}
+
+.sentiero-price small {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .sentiero { grid-template-columns: 1fr; gap: 2rem; }
+  .sentiero.reverse { direction: ltr; }
+}
+
+/* ========== MAESTRO ========== */
+.maestro {
+  background: var(--bg-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+.maestro::before {
+  content: 'IL MAESTRO';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(8rem, 22vw, 22rem);
+  font-weight: 400;
+  color: rgba(201, 164, 92, 0.025);
+  letter-spacing: -0.02em;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+.maestro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.maestro-image {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-elevated);
+}
+
+.maestro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: contrast(1.05) brightness(0.95);
+}
+
+.maestro-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--line-strong);
+  z-index: 2;
+  pointer-events: none;
+  margin: 1rem;
+}
+
+.maestro-content .eyebrow { display: block; margin-bottom: 1.5rem; }
+
+.maestro-content h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+}
+
+.maestro-content h2 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.maestro-role {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.maestro-content p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  font-weight: 300;
+  max-width: 55ch;
+}
+
+.maestro-content p:last-of-type { margin-bottom: 2.5rem; }
+
+.maestro-quote {
+  border-left: 1px solid var(--gold);
+  padding-left: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.maestro-quote p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--gold-bright);
+  margin: 0 !important;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .maestro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+/* ========== TESTIMONIALS / VOCI ========== */
+.voci {
+  background: var(--bg-base);
+  position: relative;
+}
+
+.voci-intro {
+  text-align: center;
+  max-width: 60ch;
+  margin: 0 auto 5rem;
+}
+
+.voci-intro .eyebrow { display: block; margin-bottom: 1rem; }
+
+.voci-intro h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.5rem;
+}
+
+.voci-intro h2 em { font-style: italic; color: var(--gold-bright); }
+
+.voci-intro-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.voci-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.voce-card {
+  background: var(--bg-card);
+  padding: 3rem;
+  position: relative;
+  border: 1px solid var(--line);
+  transition: border-color 0.4s ease, transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.voce-card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-4px);
+}
+
+.voce-card::before {
+  content: '"';
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 5rem;
+  color: var(--gold);
+  line-height: 1;
+  opacity: 0.4;
+}
+
+.voce-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+  font-weight: 300;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.voce-text mark {
+  background: transparent;
+  color: var(--gold-bright);
+  font-weight: 400;
+}
+
+.voce-attribution {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.voce-initial {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-base);
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.voce-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.voce-detail {
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.voce-card-featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(201, 164, 92, 0.06) 100%);
+  border-color: var(--line-strong);
+  padding: clamp(2.5rem, 5vw, 4rem);
+  position: relative;
+}
+
+.voce-card-featured::before {
+  font-size: 7rem;
+  opacity: 0.5;
+  top: 1rem;
+}
+
+.voce-card-featured .voce-text {
+  font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+  line-height: 1.55;
+}
+
+.voce-card-featured .voce-initial {
+  width: 52px;
+  height: 52px;
+  font-size: 1.4rem;
+}
+
+.voce-card-featured .voce-name { font-size: 1.3rem; }
+
+.voce-card-tag {
+  font-family: var(--font-label);
+  font-size: 1.4rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.voce-card-tag::before {
+  content: '';
+  width: 36px;
+  height: 1px;
+  background: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .voci-grid { grid-template-columns: 1fr; }
+  .voce-card { padding: 2rem; }
+}
+
+/* ========== LIBRO ========== */
+.libro {
+  background: var(--bg-deep);
+}
+
+.libro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.libro-cover {
+  position: relative;
+  perspective: 1500px;
+}
+
+.libro-cover-inner {
+  background: linear-gradient(135deg, #1a1d3a 0%, #2d1b3d 50%, #1a1d3a 100%);
+  aspect-ratio: 2/3;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border: 1px solid var(--gold-deep);
+  transform: rotateY(-5deg) rotateX(2deg);
+  transition: transform 0.6s ease;
+  box-shadow:
+    -20px 20px 40px rgba(0,0,0,0.5),
+    inset 0 0 80px rgba(201, 164, 92, 0.05);
+  overflow: hidden;
+}
+
+.libro-cover-inner::before {
+  content: '';
+  position: absolute;
+  top: 1rem; right: 1rem; bottom: 1rem; left: 1rem;
+  border: 1px solid rgba(201, 164, 92, 0.2);
+  pointer-events: none;
+}
+
+.libro-cover-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.libro:hover .libro-cover-inner { transform: rotateY(-2deg) rotateX(0deg); }
+
+.libro-cover-eyebrow {
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+}
+
+.libro-cover-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--gold-bright);
+  text-align: center;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.libro-cover-title small {
+  display: block;
+  font-style: normal;
+  font-size: 0.5em;
+  color: var(--text-primary);
+  margin-top: 0.5em;
+  letter-spacing: 0.1em;
+}
+
+.libro-cover-author {
+  text-align: center;
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.libro-content .eyebrow { display: block; margin-bottom: 1.5rem; }
+
+.libro-content h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.5rem;
+}
+
+.libro-content h2 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.libro-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  max-width: 55ch;
+}
+
+.libro-meta {
+  display: flex;
+  gap: 2.5rem;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+
+.libro-meta-item .label {
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.libro-meta-item .value {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--gold-bright);
+}
+
+@media (max-width: 900px) {
+  .libro-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .libro-cover { max-width: 320px; margin: 0 auto; }
+}
+
+/* ========== SANKALPA ========== */
+.sankalpa {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(5rem, 10vw, 9rem) var(--gutter);
+  overflow: hidden;
+}
+
+.sankalpa-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.sankalpa-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sankalpa-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(7,9,26,0.3) 0%, rgba(7,9,26,0.85) 100%);
+}
+
+.sankalpa-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+}
+
+.sankalpa-eyebrow {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  display: block;
+}
+
+.sankalpa-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 1.05;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+}
+
+.sankalpa-quote em {
+  color: var(--gold-bright);
+  font-style: italic;
+}
+
+.sankalpa-meaning {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 50ch;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.sankalpa-divider {
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+  margin: 2rem auto;
+}
+
+/* ========== FINAL CTA ========== */
+.final-cta {
+  background: var(--bg-base);
+  padding: clamp(6rem, 12vw, 10rem) var(--gutter);
+  text-align: center;
+}
+
+.final-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-cta .eyebrow { display: block; margin-bottom: 2rem; }
+
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.final-cta h2 em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.final-cta-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: var(--bg-deep);
+  padding: 5rem var(--gutter) 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand-block { max-width: 350px; }
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand img { height: 50px; width: auto; }
+
+.footer-brand-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.footer-brand-text small {
+  display: block;
+  font-family: var(--font-label);
+  font-style: normal;
+  font-size: 0.95rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-top: 0.25rem;
+}
+
+.footer-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 1.05rem;
+}
+
+.footer-col h4 {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.footer-col ul { list-style: none; }
+
+.footer-col li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-col a {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  font-weight: 300;
+}
+
+.footer-col a:hover { color: var(--gold-bright); }
+
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+@media (max-width: 768px) {
+  .footer-main { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* ========== FOOTER LEGAL / DISCLAIMER / DESIGNER ========== */
+.footer-legal-row {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-legal-row .footer-copyright {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  line-height: 1.7;
+  text-align: left;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--gold);
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: var(--gold);
+  color: var(--bg-base);
+  transform: translateY(-2px);
+}
+
+.footer-social svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.footer-legal-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.footer-legal-links a {
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.footer-legal-links a:hover { color: var(--gold-bright); }
+
+.footer-disclaimer {
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  padding: 0 var(--gutter);
+}
+
+.footer-designer {
+  max-width: var(--max-width);
+  margin: 2.5rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.footer-designer em {
+  color: var(--gold);
+  font-style: italic;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  text-transform: none;
+  font-size: 1.15em;
+}
+
+@media (max-width: 768px) {
+  .footer-legal-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .footer-legal-row .footer-copyright { text-align: center; }
+  .footer-social { justify-content: center; }
+  .footer-legal-links { justify-content: center; flex-wrap: wrap; gap: 1.5rem; }
+  .footer-disclaimer { font-size: 0.95rem; line-height: 1.65; margin-top: 2rem; }
+  .footer-designer { font-size: 0.85rem; letter-spacing: 0.22em; margin-top: 2rem; padding-top: 1.5rem; }
+}
+
+/* MOBILE RESPONSIVE · TESTI E LAYOUT */
+@media (max-width: 768px) {
+  /* Gutter più stretto su mobile */
+  :root { --gutter: 1.25rem; }
+
+  /* Nav: brand più compatto e leggibile */
+  .nav { padding: 1rem var(--gutter); }
+  .nav-brand img { height: 32px; }
+  .nav-brand-text { font-size: 0.95rem; letter-spacing: 0.18em; }
+  .nav-brand-text small { font-size: 0.78rem; letter-spacing: 0.22em; }
+  .nav-cta { font-size: 0.95rem; padding: 0.75rem 1.2rem; letter-spacing: 0.14em; }
+
+  /* Eyebrow ovunque più grande su mobile */
+  .eyebrow { font-size: 1.1rem; letter-spacing: 0.32em; }
+
+  /* Section padding ridotto */
+  section { padding: clamp(3.5rem, 8vw, 5rem) var(--gutter); }
+
+  /* Hero: testo più visibile, overlay più scuro */
+  .hero h1 { font-size: clamp(2.4rem, 9vw, 3.5rem); max-width: 16ch; }
+  .hero-tagline { font-size: 1.15rem; max-width: 32ch; margin-top: 1.5rem; }
+  .hero-meta { gap: 1rem; }
+  .hero-meta-line { width: 35px; }
+  .hero-actions { gap: 0.8rem; margin-top: 2rem; }
+  .hero-scroll { display: none; }
+
+  /* Bottoni: full width su mobile per click facile */
+  .btn { padding: 1.05rem 1.5rem; font-size: 0.92rem; letter-spacing: 0.16em; width: 100%; justify-content: center; }
+  .hero-actions .btn { width: 100%; }
+
+  /* Manifesto */
+  .manifesto-meta-title { font-size: 1.1rem; }
+  .manifesto-text p { font-size: clamp(1.35rem, 5vw, 1.75rem); }
+  .manifesto-attribution-text { font-size: 0.95rem; letter-spacing: 0.22em; }
+
+  /* Numbers: griglia 1 colonna piena su small mobile */
+  .number-label { font-size: 1.3rem; letter-spacing: 0.1em; }
+
+  /* Gallery: bento più grande, immagini meno tagliate */
+  .gallery-grid { grid-auto-rows: 200px; gap: 0.6rem; }
+  .gallery-caption { font-size: 0.95rem; letter-spacing: 0.28em; bottom: 1rem; left: 1rem; opacity: 1; transform: translateY(0); }
+
+  /* Sentieri: stack verticale, foto più alta per non tagliare */
+  .sentiero { gap: 1.5rem; padding: 2rem 0; margin-bottom: 3rem; }
+  .sentiero-visual { aspect-ratio: 3/2; }
+  .sentiero-number-badge { font-size: 2.5rem; top: 1rem; left: 1rem; }
+  .sentiero-content h3 { font-size: clamp(2rem, 8vw, 2.5rem); }
+  .sentiero-subtitle { font-size: 1.1rem; }
+  .sentiero-description { font-size: 1.05rem; line-height: 1.7; }
+  .sentiero-features li { font-size: 1.05rem; padding: 0.85rem 0; }
+  .sentiero-price { font-size: 1.6rem; }
+  .sentiero-price small { font-size: 1rem !important; letter-spacing: 0.15em; margin-left: 0.4rem; display: inline-block; }
+
+  /* Maestro: foto landscape + content stack */
+  .maestro-grid { gap: 2rem; }
+  .maestro-image { aspect-ratio: 3/2; }
+  .maestro-image::before { margin: 0.5rem; }
+  .maestro-role { font-size: 1.1rem; margin-bottom: 1.5rem; }
+  .maestro-content p { font-size: 1.05rem; line-height: 1.75; }
+  .maestro-quote p { font-size: 1.2rem; }
+  .maestro::before { font-size: 5rem; }
+
+  /* Voci */
+  .voci-intro { margin-bottom: 3rem; }
+  .voci-intro-text { font-size: 1.1rem; }
+  .voce-card { padding: 1.75rem; }
+  .voce-card-tag { font-size: 1.1rem; letter-spacing: 0.25em; gap: 0.6rem; }
+  .voce-card-tag::before { width: 24px; }
+  .voce-detail { font-size: 0.85rem; letter-spacing: 0.22em; }
+  .voce-name { font-size: 1.05rem; }
+  .voce-card-featured .voce-text { font-size: 1.15rem; }
+  .voce-card-featured .voce-name { font-size: 1.15rem; }
+
+  /* Libro */
+  .libro-grid { gap: 2.5rem; }
+  .libro-cover { max-width: 280px; }
+  .libro-cover-inner { padding: 1.75rem; transform: none; }
+  .libro-cover-eyebrow { font-size: 0.85rem; letter-spacing: 0.35em; }
+  .libro-cover-author { font-size: 0.95rem; letter-spacing: 0.22em; }
+  .libro-content p { font-size: 1.05rem; }
+  .libro-meta { gap: 1.5rem; }
+  .libro-meta-item .label { font-size: 0.85rem; letter-spacing: 0.22em; }
+  .libro-meta-item .value { font-size: 1.05rem; }
+
+  /* Sankalpa: overlay più forte su mobile dove la foto è più invasiva */
+  .sankalpa { min-height: 75vh; }
+  .sankalpa-bg::after {
+    background: radial-gradient(circle at center, rgba(7,9,26,0.55) 0%, rgba(7,9,26,0.92) 100%);
+  }
+  .sankalpa-eyebrow { font-size: 0.95rem; letter-spacing: 0.35em; margin-bottom: 1.75rem; }
+  .sankalpa-quote { font-size: clamp(2.2rem, 11vw, 3.5rem); margin-bottom: 2rem; }
+  .sankalpa-meaning { font-size: 1.1rem; }
+
+  /* Final CTA */
+  .final-cta { padding: 4rem var(--gutter); }
+  .final-cta-text { font-size: 1.1rem; }
+
+  /* Footer mobile compatto ma leggibile */
+  .footer { padding: 3.5rem var(--gutter) 1.5rem; }
+  .footer-main { gap: 2.5rem; margin-bottom: 2.5rem; }
+  .footer-brand img { height: 42px; }
+  .footer-brand-text { font-size: 1.25rem; }
+  .footer-brand-text small { font-size: 0.85rem; letter-spacing: 0.22em; }
+  .footer-tagline { font-size: 0.98rem; line-height: 1.7; }
+  .footer-col h4 { font-size: 0.95rem; letter-spacing: 0.32em; margin-bottom: 1rem; }
+  .footer-col li { margin-bottom: 0.65rem; }
+  .footer-col a { font-size: 1.05rem; }
+  .footer-bottom p { font-size: 0.85rem; letter-spacing: 0.22em; line-height: 1.7; }
+  .footer-disclaimer { font-size: 0.95rem !important; }
+  .footer-legal-links { font-size: 0.95rem !important; }
+}
+
+/* Schermi molto piccoli (~iPhone SE) */
+@media (max-width: 380px) {
+  :root { --gutter: 1rem; }
+  .hero h1 { font-size: 2.2rem; }
+  .hero-tagline { font-size: 1.05rem; }
+  .btn { font-size: 0.85rem; padding: 0.95rem 1.2rem; letter-spacing: 0.14em; }
+  .sentiero-content h3 { font-size: 1.85rem; }
+  .voce-card { padding: 1.4rem; }
+}
+
+/* ========== UTILITIES ========== */
+.divider-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.divider-mark::before, .divider-mark::after {
+  content: '';
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: var(--line);
+}
+
+.divider-mark span {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.5em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+
+/* ========== TESTIMONIAL STRIP ========== */
+.testimonial-strip {
+  padding: 6rem 0 5rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(201,164,92,0.025) 50%, transparent 100%);
+  text-align: center;
+}
+.testimonial-strip .reveal {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.t-strip-tag {
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.85;
+}
+.t-strip-tag::before,
+.t-strip-tag::after {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+.t-strip-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  font-weight: 300;
+  line-height: 1.45;
+  color: var(--cream);
+  margin: 0 0 2.5rem;
+  font-style: normal;
+  padding: 0 1rem;
+}
+.t-strip-quote em {
+  font-style: italic;
+  color: var(--gold);
+}
+.t-strip-attribution {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  color: var(--cream);
+  opacity: 0.7;
+  font-family: var(--font-label);
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.t-strip-attribution strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+.t-strip-line {
+  width: 50px;
+  height: 1px;
+  background: rgba(201,164,92,0.5);
+}
+
+@media (max-width: 768px) {
+  .testimonial-strip { padding: 4rem 0 3.5rem; }
+  .t-strip-tag { font-size: 0.75rem; letter-spacing: 0.22em; }
+  .t-strip-quote { font-size: 1.3rem; padding: 0 0.5rem; }
+  .t-strip-attribution { font-size: 0.75rem; letter-spacing: 0.12em; }
+}
+
+/* ========== STICKY MOBILE CTA ========== */
+.sticky-mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 999;
+  background: var(--gold);
+  color: var(--night);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 20px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: background 0.2s ease;
+}
+.sticky-mobile-cta:hover { background: #d8b46c; }
+.sticky-mobile-cta .arrow { font-size: 1.1em; }
+
+@media (max-width: 768px) {
+  .sticky-mobile-cta { display: flex; }
+  /* Aggiungo padding al footer per non sovrapporre */
+  footer { padding-bottom: 100px !important; }
+}
+
+
+/* ========== FONT: Playfair Display per i titoli ========== */
+:root { --font-display: "Playfair Display", serif; }
+h1, h2, h3, h4,
+.display-xxl, .display-xl, .display-l,
+.manifesto-text p,
+.price-display,
+.nav-brand-text,
+.footer-brand-text { font-family: "Playfair Display", serif !important; }
+
+/* ========== HAMBURGER + MOBILE MENU ========== */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 200;
+  flex-shrink: 0;
+}
+.nav-hamburger span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--gold, #c9a45c);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  transform-origin: center;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+@media (max-width: 900px) {
+  .nav-hamburger { display: flex; }
+  .nav-links { display: none !important; }
+}
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 150;
+  background: rgba(7, 9, 26, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 5rem 2rem 3rem;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a {
+  font-family: var(--font-display, "Playfair Display", serif);
+  font-size: clamp(1.3rem, 4.5vw, 1.9rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #f5f1e8;
+  text-decoration: none;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(201, 164, 92, 0.12);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+.nav-mobile-menu a:last-child { border-bottom: none; }
+.nav-mobile-menu a:hover { color: #c9a45c; }
+.nav-mobile-free {
+  background: #c9a45c;
+  color: #0a0c1f;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.nav-old {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  background: rgba(7,9,26,.6);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(201,164,92,.1);
+}
+</style>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav" id="nav">
+  <a href="/" class="nav-brand">
+    <img src="images/logo.png" alt="Yoga Nidra Italia™">
+    <span class="nav-brand-text">Yoga Nidra Italia™<small>Il Sonno dei Re™ · Est. 2001</small></span>
+  </a>
+  <div class="nav-links">
+    <a href="/la-caverna">La Caverna <span style="background:var(--gold);color:#0a0c1f;font-size:.6rem;font-weight:700;letter-spacing:.08em;padding:2px 6px;border-radius:3px;margin-left:4px;vertical-align:middle;">GRATIS</span></a>
+    <a href="/il-nidrista">Il Nidrista™</a>
+    <a href="/il-sonno-dei-re">Il Sonno dei Re™</a>
+    <a href="/audioyoga-studio">AudioYoga Studio™</a>
+    <a href="/the-spiral">The Spiral</a>
+    <a href="/pratica-del-giovedi">Pratica del Giovedì</a>
+    <a href="/ritiro-solstizio">Ritiro del Solstizio</a>
+  </div>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile-menu" id="navMobileMenu">
+  <a href="/la-caverna">La Caverna del Cuore <span class="nav-mobile-free">GRATIS</span></a>
+  <a href="/il-nidrista">Il Nidrista™</a>
+  <a href="/il-sonno-dei-re">Il Sonno dei Re™</a>
+  <a href="/audioyoga-studio">AudioYoga Studio™</a>
+  <a href="/the-spiral">The Spiral</a>
+  <a href="/pratica-del-giovedi">Pratica del Giovedì</a>
+  <a href="/ritiro-solstizio">Ritiro del Solstizio</a>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="images/hero-cosmic.jpg" alt="">
+  </div>
+  <div class="hero-noise"></div>
+  <div class="hero-corner-mark">EST · MMI</div>
+
+  <div class="hero-content">
+    <div class="hero-meta">
+      <span class="hero-meta-line"></span>
+      <span class="eyebrow">Il Sonno dei Re™ · Pratica Autentica</span>
+    </div>
+
+    <h1>La pratica del<br><em>sonno consapevole</em></h1>
+
+    <p class="hero-tagline">
+      Nel limbo tra veglia e sonno abita una coscienza più profonda.<br>
+      Yoga Nidra è l'arte di abitare quella soglia.
+    </p>
+
+    <div class="hero-actions">
+      <a href="/la-caverna" class="btn btn-primary">Senti la pratica gratuita <span class="arrow">→</span></a>
+      <a href="#sentieri" class="btn btn-ghost">Scopri i Sentieri <span class="arrow">↓</span></a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="hero-scroll-text">Scroll</div>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- ========== TESTIMONIAL STRIP (above-the-fold) ========== -->
+<section class="testimonial-strip">
+  <div class="container">
+    <div class="reveal">
+      <div class="t-strip-tag">Voce d'Elezione: testimonianze</div>
+      <blockquote class="t-strip-quote">
+        Sto cominciando a notare un cambiamento nella qualità del sonno. Per me è sempre stato un problema. Ma da qualche giorno <em>il sonno è diventato quasi 'amico'</em>.
+      </blockquote>
+      <div class="t-strip-attribution">
+        <span class="t-strip-line"></span>
+        <span class="t-strip-name"><strong>Giada</strong> — Insegnante Hatha Yoga</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MANIFESTO ========== -->
+<section class="manifesto" id="manifesto">
+  <div class="container">
+    <div class="manifesto-grid">
+      <aside class="manifesto-meta">
+        <span class="eyebrow">Capitolo I</span>
+        <p class="manifesto-meta-title">Cosa accade quando il corpo riposa e la coscienza resta desta.</p>
+      </aside>
+
+      <div class="manifesto-text">
+        <p>Esiste uno spazio, sottile come un soffio, dove il corpo dorme e <em>la mente visiona</em>.</p>
+        <p>Lo abbiamo chiamato in molti modi: turiya, sushupti consapevole, il Sonno dei Re. È lo stato in cui la pratica antica dello Yoga Nidra ti accompagna, una sillaba alla volta.</p>
+        <p>Non è meditazione. Non è rilassamento. È <em>discesa</em>: guidata, lucida, profonda. Verso la radice silenziosa della tua attenzione.</p>
+
+        <div class="manifesto-attribution">
+          <span class="manifesto-attribution-line"></span>
+          <span class="manifesto-attribution-text">Danilo Ratti · Fondatore YNI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NUMBERS ========== -->
+<section class="numbers">
+  <div class="container">
+    <div class="numbers-grid">
+      <div class="number-cell">
+        <div class="number-value">25<sup>+</sup></div>
+        <div class="number-label">Anni di Pratica</div>
+      </div>
+      <div class="number-cell">
+        <div class="number-value">2.400<sup>+</sup></div>
+        <div class="number-label">Praticanti Guidati</div>
+      </div>
+      <div class="number-cell">
+        <div class="number-value">7</div>
+        <div class="number-label">Libri Pubblicati</div>
+      </div>
+      <div class="number-cell">
+        <div class="number-value">∞</div>
+        <div class="number-label">Notti Trasformate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GALLERY ========== -->
+<section class="gallery">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="eyebrow">II · Testimonianze visive</span>
+        <h2 class="display-l" style="margin-top: 1rem;">Una pratica<br><em>che si vive</em>.</h2>
+      </div>
+      <p class="serif-quote" style="max-width: 32ch; color: var(--text-muted);">
+        Workshop, ritiri, sessioni di gruppo. Lo Yoga Nidra è un'esperienza condivisa nel silenzio.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item gallery-item-1">
+        <img src="images/danilo-teaching.jpg" alt="Danilo Ratti guida una sessione di gruppo">
+        <span class="gallery-caption">Sessione di gruppo · Milano</span>
+      </div>
+      <div class="gallery-item gallery-item-2">
+        <img src="images/yni-group.jpg" alt="Gruppo in pratica YNI">
+        <span class="gallery-caption">Pratica collettiva</span>
+      </div>
+      <div class="gallery-item gallery-item-3">
+        <img src="images/workshop-bw.jpg" alt="Workshop in bianco e nero">
+        <span class="gallery-caption">Wonderland Festival</span>
+      </div>
+      <div class="gallery-item gallery-item-4">
+        <img src="images/workshop-original.jpg" alt="Workshop yoga nidra">
+        <span class="gallery-caption">Studio · Sessione serale</span>
+      </div>
+      <div class="gallery-item gallery-item-5">
+        <img src="images/workshop-4.jpg" alt="Praticanti in shavasana">
+        <span class="gallery-caption">Shavasana profonda</span>
+      </div>
+      <div class="gallery-item gallery-item-6">
+        <img src="images/workshop-5.jpg" alt="Pratica all'aperto">
+        <span class="gallery-caption">Pratica all'aperto</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SENTIERI ========== -->
+<section class="sentieri" id="sentieri">
+  <div class="container">
+
+    <div class="sentieri-intro">
+      <h2>I Tre <em>Sentieri</em></h2>
+      <p class="sentieri-intro-text">
+        Ogni praticante incontra Yoga Nidra in modo diverso. Tre vie, una sola direzione: la chiarezza interiore. Scegli quella che risuona oggi: potrai sempre cambiare strada.
+      </p>
+    </div>
+
+    <!-- Sentiero 1: Il Nidrista -->
+    <article class="sentiero">
+      <div class="sentiero-visual">
+        <div class="sentiero-number-badge">I</div>
+        <img src="images/workshop-5.jpg" alt="Il Nidrista™">
+      </div>
+      <div class="sentiero-content">
+        <span class="eyebrow">Sentiero Primo · Pratica solitaria</span>
+        <h3>Il <em>Nidrista™</em></h3>
+        <p class="sentiero-subtitle">Per chi vuole iniziare in autonomia.</p>
+        <p class="sentiero-description">
+          Una raccolta progressiva di audio di <em>Yoga Nidra Integrato™</em> con pratiche guidate da Danilo Ratti. Audio in alta qualità per accompagnarti dal primo respiro fino alla soglia dello yoga del sonno. Ascolto a vita, ovunque. Pratiche guidate progressive, dalla base all'avanzato.
+        </p>
+        <ul class="sentiero-features">
+          <li>Audio assolutamente <em>LIVE</em>, cioè VIVI</li>
+          <li>Decine di pratiche già pronte. Nuove sessioni quando arrivano, senza calendario</li>
+          <li>Aggiornamenti per sempre: chi entra ora riceve anche ciò che verrà</li>
+          <li>Pratica ovunque la vita ti porti: in viaggio, al risveglio, prima del sonno</li>
+        </ul>
+        <div class="sentiero-price-row">
+          <div class="sentiero-price">€29<small style="font-size: 1.1rem;">al mese</small></div>
+        </div>
+        <a href="/il-nidrista" class="btn btn-primary">Esplora il canale <span class="arrow">→</span></a>
+      </div>
+    </article>
+
+    <!-- Sentiero 2: The Spiral -->
+    <article class="sentiero reverse">
+      <div class="sentiero-visual">
+        <div class="sentiero-number-badge">II</div>
+        <img src="images/danilo-teaching.jpg" alt="The Spiral">
+      </div>
+      <div class="sentiero-content">
+        <span class="eyebrow">Sentiero Secondo · Mentorship 1:1</span>
+        <h3>The <em>Spiral</em></h3>
+        <p class="sentiero-subtitle">Diventa insegnante consapevole, libero ed autonomo.</p>
+        <p class="sentiero-description">
+          Percorso personalizzato dedicato. Dieci incontri l'anno con Danilo Ratti. Impara la teoria esaustiva, gli script avanzati, come insegnare YNI con competenza, sicurezza e autorevolezza.
+        </p>
+        <ul class="sentiero-features">
+          <li>Su candidatura · percorso annuale</li>
+          <li>10 incontri 1:1 + 1 bonus (1h30 ciascuno)</li>
+          <li>Supporto Telegram in tempo reale, 7 giorni su 7</li>
+          <li>Canale Audio incluso (€29/mese valore)</li>
+          <li>6 bonus esclusivi: script, skills, report completi, accesso ad altre risorse private</li>
+          <li>Diventa un bravo insegnante consapevole e autonomo con le tecniche giuste e… la testa ed il cuore sempre presenti ;)</li>
+        </ul>
+        <a href="/the-spiral" class="btn btn-primary">Esplora The Spiral <span class="arrow">→</span></a>
+      </div>
+    </article>
+
+    <!-- Sentiero 3: AudioYoga -->
+    <article class="sentiero">
+      <div class="sentiero-visual">
+        <div class="sentiero-number-badge">III</div>
+        <img src="images/workshop-4.jpg" alt="AudioYoga Studio">
+      </div>
+      <div class="sentiero-content">
+        <span class="eyebrow">Sentiero Terzo · Membership audio</span>
+        <h3>AudioYoga <em>Studio</em></h3>
+        <p class="sentiero-subtitle">Pratica bendato o al buio ed accendi la pratica di hatha yoga a occhi chiusi: una nuova forma di Hatha Yoga nelle tue cuffie, quando vuoi.</p>
+        <p class="sentiero-description">
+          La biblioteca sonora di lezioni complete (90 min l'una) di <em>Hatha Yoga</em> di Yoga Nidra Italia™ per praticare <em>DAVVERO</em> a occhi chiusi ed entrare dentro. Accesso continuativo a un catalogo crescente di pratiche hatha in formato audio, registrazioni di workshop, meditazioni esclusive per gli iscritti.
+        </p>
+        <ul class="sentiero-features">
+          <li>Nuove pratiche pubblicate ogni mese</li>
+          <li>Pratiche innovative introvabili altrove. Dal buio alla luce</li>
+          <li>Accesso illimitato all'archivio storico</li>
+          <li>Streaming + ascolto offline</li>
+          <li>Cancellabile in qualunque momento</li>
+        </ul>
+        <div class="sentiero-price-row">
+          <div class="sentiero-price">€9<small style="font-size: 2.1rem;">/ mese</small></div>
+        </div>
+        <a href="/audioyoga-studio" class="btn btn-primary">Esplora AudioYoga <span class="arrow">→</span></a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ========== MAESTRO ========== -->
+<section class="maestro" id="maestro">
+  <div class="container">
+    <div class="maestro-grid">
+      <div class="maestro-image">
+        <img src="images/danilo-teaching.jpg" alt="Danilo Ratti">
+      </div>
+      <div class="maestro-content">
+        <span class="eyebrow">III · Il Maestro</span>
+        <h2>Danilo <em>Ratti</em></h2>
+        <p class="maestro-role">Insegnante. Antropologo. Autore.</p>
+
+        <p>Dal 2001 Danilo Ratti accompagna i suoi allievi nello studio e nella pratica dello Yoga Nidra autentico, quello che attinge alle fonti originarie in modo libero e senza dogmi, non alla versione semplificata e fortemente limitata diffusa dalle scuole moderne.</p>
+
+        <p>Autore di vari libri e ideatore delle metodologie <em>Yoga Nidra Integrato™</em> e <em>Il Sonno dei Re™</em>, è una delle voci più rispettate nel panorama italiano dello yoga del sonno. Ama viaggiare ed insegna in vari luoghi, conduce ritiri, ha guidato migliaia di praticanti e formato decine di insegnanti.</p>
+
+        <div class="maestro-quote">
+          <p>"Non insegno solo 'tecniche' di Yoga. Apro porte. Quello che c'è dietro lo scopri solo tu."</p>
+        </div>
+
+        <a href="#sentieri" class="btn btn-ghost">Esplora i Sentieri <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== VOCI ========== -->
+<section class="voci" id="voci">
+  <div class="container">
+    <div class="voci-intro">
+      <span class="eyebrow">IV · Le voci dei praticanti</span>
+      <h2>Quando l'allievo è pronto,<br>l'<em>insegnante appare</em>.</h2>
+      <p class="voci-intro-text">
+        Quello che accade nello spazio della pratica non si racconta facilmente. Eppure, alcune parole arrivano. Sono frammenti veri di chi ha attraversato, o sta attraversando, la soglia.
+      </p>
+    </div>
+
+    <div class="voci-grid">
+
+      <!-- FEATURED: Giada -->
+      <article class="voce-card voce-card-featured">
+        <div class="voce-card-tag">Voce d'Elezione: testimonianze</div>
+        <p class="voce-text">
+          Caro Danilo, sto cominciando a notare un cambiamento nella qualità del sonno. Per me è sempre stato un problema. Ma da qualche giorno <mark>il sonno è diventato quasi 'amico'</mark>. Spesso le tue parole mi passano come immagini nella mente e mi tranquillizzano.
+        </p>
+        <p class="voce-text" style="margin-top: -0.5rem;">
+          Sento già dei cambiamenti anche nella mia pratica e nel modo in cui la trasmetto. Sento <mark>più centratura e più morbidezza nell'immobilità</mark>. E tanta gioia.
+        </p>
+        <div class="voce-attribution">
+          <div class="voce-initial">G</div>
+          <div>
+            <div class="voce-name">Giada</div>
+            <div class="voce-detail">Insegnante Hatha Yoga · Studente YNI</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Valentina -->
+      <article class="voce-card">
+        <p class="voce-text">
+          Sono commossa dalle tue parole. Ho iniziato a navigare nel corpo senza aspettarmi niente di che, e invece ci sono stata senza particolare sforzo e per un tempo prolungato. <mark>Adesso so che è un luogo a cui posso tornare quando voglio.</mark>
+        </p>
+        <p class="voce-text" style="margin-top: -0.5rem;">
+          Quando hai detto di visualizzare la luce come stelle, <mark>si è spalancato il cielo stellato sopra di me</mark>. Sembrava proprio lì. È rimasta una profonda commozione, anche dopo la pratica.
+        </p>
+        <div class="voce-attribution">
+          <div class="voce-initial">V</div>
+          <div>
+            <div class="voce-name">Valentina</div>
+            <div class="voce-detail">Praticante · ex studente The Spiral</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sheila S. -->
+      <article class="voce-card">
+        <p class="voce-text">
+          Ero totalmente presente alla pratica. <mark>Dopo il ribaltamento della coscienza</mark> ho avuto la netta sensazione di avere un gran libro in mano, lo sentivo materialmente.
+        </p>
+        <p class="voce-text" style="margin-top: -0.5rem;">
+          Ti ringrazio infinitamente per la bellissima pratica e per tutto il tuo studio sullo yoga nidra che <mark>trasmetti con passione e leggerezza</mark>.
+        </p>
+        <div class="voce-attribution">
+          <div class="voce-initial">S</div>
+          <div>
+            <div class="voce-name">Sheila S.</div>
+            <div class="voce-detail">Workshop</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Pierluigi T. -->
+      <article class="voce-card">
+        <p class="voce-text">
+          Yoga Nidra è un sentiero per arrivare al mio io profondo, dal quale attingere le energie, la resilienza per accettare e percorrere la mia strada verso casa.
+        </p>
+        <p class="voce-text" style="margin-top: -0.5rem;">
+          Ognuno ha la propria casa da raggiungere: <mark>il senso della propria vita</mark>.
+        </p>
+        <div class="voce-attribution">
+          <div class="voce-initial">P</div>
+          <div>
+            <div class="voce-name">Pierluigi T.</div>
+            <div class="voce-detail">Workshop</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Ziwa G. -->
+      <article class="voce-card">
+        <p class="voce-text">
+          La lezione per me è stata veramente importante: mi ha riportato ad avere uno sguardo diverso nei confronti di alcune situazioni. <mark>Come se fosse caduto il velo di confusione</mark> che le avvolgeva.
+        </p>
+        <p class="voce-text" style="margin-top: -0.5rem;">
+          La pratica ha toccato le corde giuste, al di là del razionale e dei soliti pensieri ripetitivi.
+        </p>
+        <div class="voce-attribution">
+          <div class="voce-initial">Z</div>
+          <div>
+            <div class="voce-name">Ziwa G.</div>
+            <div class="voce-detail">Praticante · Lezione del venerdì</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Chiara V. -->
+      <article class="voce-card">
+        <p class="voce-text">
+          Grazie per il bellissimo viaggio che mi hai fatto intraprendere con Yoga Nidra. <mark>La montagna innevata è rimasta impressa nella mia mente e la caverna nel mio cuore</mark>.
+        </p>
+        <p class="voce-text" style="margin-top: -0.5rem;">
+          Grazie ancora di tutto e un abbraccio.
+        </p>
+        <div class="voce-attribution">
+          <div class="voce-initial">C</div>
+          <div>
+            <div class="voce-name">Chiara V.</div>
+            <div class="voce-detail">Workshop</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Stevens B. -->
+      <article class="voce-card">
+        <p class="voce-text">
+          A livello razionale non saprei dire, ma posso dirti che <mark>qualcosa di buono succede dopo la pratica</mark>. È come se fossi più tranquillo, appagato, sorridente.
+        </p>
+        <p class="voce-text" style="margin-top: -0.5rem;">
+          Il mio lavoro è pesante, alto stress. La tensione non riesco a scioglierla, nemmeno con le lezioni di yoga, ma <mark>Nidra mi tocca molto</mark>.
+        </p>
+        <div class="voce-attribution">
+          <div class="voce-initial">S</div>
+          <div>
+            <div class="voce-name">Stevens B.</div>
+            <div class="voce-detail">Workshop</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== LIBRO ========== -->
+<section class="libro" id="libro">
+  <div class="container">
+    <div class="libro-grid">
+
+      <div class="libro-cover">
+        <div class="libro-cover-inner">
+          <div class="libro-cover-eyebrow">Yoga Nidra Italia™</div>
+          <div class="libro-cover-title">Il Sonno<br>dei <em>Re</em><small>Una pratica per il risveglio profondo</small></div>
+          <div class="libro-cover-author">Danilo Ratti</div>
+        </div>
+      </div>
+
+      <div class="libro-content">
+        <span class="eyebrow">V · Pubblicazione</span>
+        <h2>Il Sonno <em>dei Re</em></h2>
+        <p>
+          Il manuale pratico, teorico e iniziatico per chi vuole comprendere lo Yoga Nidra dalle radici fino ad arrivare alla versione attuale di <em>Yoga Nidra Integrato™ (YNI)</em>. Origini storiche, anatomia sottile, struttura della pratica, sankalpa, mappature dello stato di coscienza, informazioni innovative e mai presentate prima.
+        </p>
+        <p>
+          Una guida rigorosa per principianti e insegnanti, scritta in italiano contemporaneo senza compromessi accademici né semplificazioni new age. <em>Dritto al punto dentro, come lo Yoga Nidra.</em>
+        </p>
+
+        <div class="libro-meta">
+          <div class="libro-meta-item">
+            <span class="label">Pagine</span>
+            <span class="value">280</span>
+          </div>
+          <div class="libro-meta-item">
+            <span class="label">Formato</span>
+            <span class="value">Cartaceo · Digitale</span>
+          </div>
+          <div class="libro-meta-item">
+            <span class="label">Compendio</span>
+            <span class="value">+25 anni di Yoga Nidra condensati</span>
+          </div>
+        </div>
+
+        <span class="btn btn-ghost" style="cursor: default; opacity: 0.7; pointer-events: none;">fuori catalogo · in revisione</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== SANKALPA ========== -->
+<section class="sankalpa">
+  <div class="sankalpa-bg">
+    <img src="images/sankalpa.jpg" alt="">
+  </div>
+  <div class="sankalpa-content">
+    <span class="sankalpa-eyebrow">Il Sankalpa</span>
+    <p class="sankalpa-quote">Io posso<br><em>cambiare</em><br>le mie stelle.</p>
+    <div class="sankalpa-divider"></div>
+    <p class="sankalpa-meaning">
+      Il sankalpa è il seme di intenzione che pianti nello stato profondo della pratica. Non un desiderio. Una scelta. Coltivata nel silenzio più fertile, germoglia nella veglia.
+    </p>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="final-cta">
+  <div class="final-cta-content">
+    <span class="eyebrow">Inizia il viaggio</span>
+    <h2>Apri la <em>porta</em>.</h2>
+    <p class="final-cta-text">
+      La prima pratica ti aspetta. Quello che trovi al di là della soglia, è già tuo.
+    </p>
+    <a href="/audioyoga-studio" class="btn btn-primary">Esplora AudioYoga <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-main">
+
+    <div class="footer-brand-block">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="YNI">
+        <div class="footer-brand-text">Yoga Nidra Italia™<small>Il Sonno dei Re™ · Est. 2001</small></div>
+      </div>
+      <p class="footer-tagline">
+        La pratica autentica dello yoga del risveglio e del sonno consapevole. In italiano, dalle fonti, integrato e aggiornato, libero, senza dogmi e senza compromessi.
+      </p>
+    </div>
+
+    <div class="footer-col">
+            <h4>Sentieri</h4>
+      <ul>
+        <li><a href="/la-caverna">La Caverna del Cuore</a></li>
+        <li><a href="/il-nidrista">Il Nidrista™</a></li>
+        <li><a href="/il-sonno-dei-re">Il Sonno dei Re™</a></li>
+        <li><a href="/audioyoga-studio">AudioYoga Studio™</a></li>
+        <li><a href="/the-spiral">The Spiral</a></li>
+        <li><a href="/pratica-del-giovedi">Pratica del Giovedì</a></li>
+        <li><a href="/ritiro-solstizio">Ritiro del Solstizio</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contatto</h4>
+      <ul>
+        <li><a href="mailto:info@yoganidraitalia.it">info@yoganidraitalia.it</a></li>
+        <li><a href="mailto:danilo@yoganidraitalia.it">danilo@yoganidraitalia.it</a></li>
+        <li><a href="https://t.me/yoganidraitalia" target="_blank" rel="noopener">Canale Telegram</a></li>
+        <li><a href="https://yoganidraitalia.gumroad.com" target="_blank" rel="noopener">Catalogo Gumroad</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+    <div class="footer-legal-row">
+    <p class="footer-copyright">© 2026 Danilo Ratti · Yoga Nidra Italia™ · P.IVA 04440360164</p>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/yoganidraitalia" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/yoganidraitalia" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+      <a href="https://t.me/yoganidraitalia" target="_blank" rel="noopener" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.464.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </a>
+    </div>
+    <div class="footer-legal-links">
+      <a href="https://www.facebook.com/yoganidraitalia" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/yoganidraitalia" target="_blank" rel="noopener">Instagram</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/cookies">Cookies</a>
+    </div>
+  </div>
+
+  <p class="footer-disclaimer">
+    Tutti i contenuti multimediali (audio, video, ebook, ecc.) presenti su questo sito hanno il solo fine di divulgare la conoscenza dello Yoga Nidra e di stimolare la pratica personale, fornendo strumenti di studio e di approfondimento. Non sono in alcun modo da considerarsi un suggerimento medico o psicologico, né uno strumento terapeutico.
+  </p>
+
+  <div class="footer-designer">
+    Proudly <em>SelfDesigned</em>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+reveals.forEach(el => observer.observe(el));
+</script>
+
+<script defer src="/assets/cookieconsent/cookieconsent.umd.js"></script>
+<script defer src="/assets/cookieconsent/cc-config.js"></script>
+
+<!-- ========== STICKY MOBILE CTA ========== -->
+<a href="/la-caverna" class="sticky-mobile-cta" aria-label="Senti la pratica gratuita">
+  <span>Senti la pratica gratuita</span>
+  <span class="arrow">→</span>
+</a>
+
+<script>
+(function(){
+  var btn = document.getElementById("navHamburger");
+  var menu = document.getElementById("navMobileMenu");
+  if(!btn || !menu) return;
+  btn.addEventListener("click", function(){
+    var open = menu.classList.toggle("open");
+    btn.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+  menu.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){
+      menu.classList.remove("open");
+      btn.classList.remove("open");
+      btn.setAttribute("aria-expanded","false");
+      document.body.style.overflow = "";
+    });
+  });
+})();
+</script>
+</body>
+</html>
