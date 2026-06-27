@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/cookieconsent/cookieconsent.css">
+<link rel="stylesheet" href="/assets/cookieconsent/cc-branding.css">
+<title>Sala Stampa · Yoga Nidra Italia™ - Danilo Ratti</title>
+<meta name="description" content="Sala Stampa di Yoga Nidra Italia™: articoli, podcast, canali e pubblicazioni di Danilo Ratti sullo Yoga Nidra autentico. Tutto in un unico spazio.">
+<link rel="canonical" href="https://yoganidraitalia.it/media.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yoga Nidra Italia™">
+<meta property="og:locale" content="it_IT">
+<meta property="og:url" content="https://yoganidraitalia.it/media.html">
+<meta property="og:title" content="Sala Stampa · Yoga Nidra Italia™">
+<meta property="og:description" content="Articoli, podcast, canali e pubblicazioni di Danilo Ratti sullo Yoga Nidra autentico.">
+<meta property="og:image" content="https://yoganidraitalia.it/images/hero-cosmic.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sala Stampa · Yoga Nidra Italia™">
+<meta name="twitter:description" content="Articoli, podcast, canali e pubblicazioni di Danilo Ratti.">
+<meta name="twitter:image" content="https://yoganidraitalia.it/images/hero-cosmic.jpg">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #07091a; --bg-base: #0a0c1f; --bg-elevated: #131630; --bg-card: #181b35;
+  --gold: #c9a45c; --gold-bright: #e8d3a8; --gold-deep: #8b7038;
+  --text-primary: #f5f1e8; --text-muted: #ede8da; --text-dim: #d4cdb8;
+  --line: rgba(245, 241, 232, 0.08); --line-strong: rgba(201, 164, 92, 0.25);
+  --font-display: 'Playfair Display', serif; --font-body: 'Manrope', sans-serif; --font-label: 'Italiana', serif;
+  --gutter: clamp(1.25rem, 4vw, 4rem); --max-width: 1100px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-body); background: var(--bg-base); color: var(--text-primary); font-weight: 300; line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem var(--gutter); border-bottom: 1px solid var(--line); position: sticky; top: 0; background: rgba(7,9,26,0.85); backdrop-filter: blur(14px); z-index: 50; }
+.topbar-brand { display: flex; align-items: center; gap: 0.75rem; }
+.topbar-brand img { height: 34px; }
+.topbar-brand span { font-family: var(--font-label); letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.95rem; }
+.topbar a.back { color: var(--text-dim); font-size: 0.95rem; }
+.topbar a.back:hover { color: var(--gold); }
+
+.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--gutter); }
+.eyebrow { font-family: var(--font-label); font-size: 1rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); }
+
+.hero { text-align: center; padding: clamp(4rem, 9vw, 7rem) 0 clamp(2.5rem, 5vw, 4rem); }
+.hero h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1; letter-spacing: -0.02em; margin: 1.25rem 0; }
+.hero h1 em { font-style: italic; color: var(--gold-bright); }
+.hero p { max-width: 56ch; margin: 0 auto; color: var(--text-dim); font-size: 1.1rem; }
+
+section.block { padding: clamp(2.5rem, 5vw, 4rem) 0; }
+.block-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2rem; border-bottom: 1px solid var(--line); padding-bottom: 1rem; }
+.block-head h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.6rem, 3.5vw, 2.4rem); letter-spacing: -0.01em; }
+.block-head .count { font-family: var(--font-label); color: var(--gold); letter-spacing: 0.3em; font-size: 0.95rem; }
+
+.cards { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+.media-card { display: block; background: var(--bg-card); border: 1px solid var(--line); border-radius: 8px; padding: 2rem; transition: border-color .3s ease, transform .3s ease, background .3s ease; }
+.media-card:hover { border-color: var(--line-strong); transform: translateY(-3px); background: linear-gradient(135deg, var(--bg-card) 0%, rgba(201,164,92,0.05) 100%); }
+.media-card .src { font-family: var(--font-label); letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.85rem; color: var(--gold); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.6rem; }
+.media-card .src::before { content: ''; width: 22px; height: 1px; background: var(--gold); }
+.media-card h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.3rem, 2.6vw, 1.8rem); line-height: 1.2; margin-bottom: 0.75rem; }
+.media-card p { color: var(--text-dim); font-size: 1rem; margin-bottom: 1.25rem; }
+.media-card .go { color: var(--gold-bright); font-size: 0.95rem; letter-spacing: 0.08em; }
+.media-card .go .arrow { display: inline-block; transition: transform .3s ease; }
+.media-card:hover .go .arrow { transform: translateX(4px); }
+
+.channels { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; }
+.channel { display: flex; flex-direction: column; gap: 0.3rem; background: var(--bg-elevated); border: 1px solid var(--line); border-radius: 8px; padding: 1.25rem 1.4rem; transition: border-color .3s ease, transform .3s ease; }
+.channel:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+.channel .ch-name { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; color: var(--gold-bright); }
+.channel .ch-desc { font-size: 0.9rem; color: var(--text-dim); }
+
+.soon { text-align: center; color: var(--text-dim); font-family: var(--font-body); font-style: normal; font-size: 0.95rem; margin-top: 2rem; opacity: 0.75; }
+
+.page-footer { text-align: center; padding: 3rem var(--gutter); border-top: 1px solid var(--line); color: var(--text-dim); font-size: 0.95rem; margin-top: 2rem; }
+.page-footer a { color: var(--gold); }
+.page-footer .sep { opacity: 0.4; margin: 0 0.6rem; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="/" class="topbar-brand">
+    <img src="images/logo.png" alt="Yoga Nidra Italia™">
+    <span>Yoga Nidra Italia™</span>
+  </a>
+  <a href="/" class="back">← Home</a>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <span class="eyebrow">Media</span>
+    <h1>Sala <em>Stampa</em></h1>
+    <p>
+      Articoli, podcast, canali e pubblicazioni sullo Yoga Nidra autentico.
+      Tutto ciò che Danilo Ratti scrive, registra e condivide — qui, in un unico spazio.
+    </p>
+  </section>
+
+  <!-- RASSEGNA STAMPA -->
+  <section class="block">
+    <div class="block-head">
+      <h2>Rassegna stampa</h2>
+      <span class="count">Articoli</span>
+    </div>
+    <div class="cards">
+      <a class="media-card" href="https://www.yoga-magazine.it/2026/06/il-sonno-e-il-risveglio-che-abbiamo-perso/" target="_blank" rel="noopener">
+        <div class="src">Yoga Magazine</div>
+        <h3>Il sonno e il risveglio che abbiamo perso</h3>
+        <p>Un articolo sullo Yoga Nidra come arte di abitare la soglia tra veglia e sonno, e su ciò che la vita moderna ci ha fatto dimenticare.</p>
+        <span class="go">Leggi l'articolo <span class="arrow">→</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- PODCAST -->
+  <section class="block">
+    <div class="block-head">
+      <h2>Podcast</h2>
+      <span class="count">Audio</span>
+    </div>
+    <div class="cards">
+      <a class="media-card" href="https://daniloratti.substack.com" target="_blank" rel="noopener">
+        <div class="src">Substack</div>
+        <h3>Oltre la Veglia</h3>
+        <p>Il mini-podcast di Danilo Ratti: brevi esplorazioni sullo Yoga Nidra, la coscienza e il sonno consapevole. Una voce per accompagnare la soglia.</p>
+        <span class="go">Ascolta e iscriviti <span class="arrow">→</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CANALI -->
+  <section class="block">
+    <div class="block-head">
+      <h2>I canali</h2>
+      <span class="count">Dove trovarmi</span>
+    </div>
+    <div class="channels">
+      <a class="channel" href="https://daniloratti.substack.com" target="_blank" rel="noopener">
+        <span class="ch-name">Substack</span>
+        <span class="ch-desc">Oltre la Veglia · newsletter & podcast</span>
+      </a>
+      <a class="channel" href="https://t.me/yoganidraitalia" target="_blank" rel="noopener">
+        <span class="ch-name">Telegram</span>
+        <span class="ch-desc">Il canale di pratica</span>
+      </a>
+      <a class="channel" href="https://yoganidraitalia.gumroad.com" target="_blank" rel="noopener">
+        <span class="ch-name">Gumroad</span>
+        <span class="ch-desc">Audio, libri & percorsi</span>
+      </a>
+      <a class="channel" href="https://www.instagram.com/yoganidraitalia" target="_blank" rel="noopener">
+        <span class="ch-name">Instagram</span>
+        <span class="ch-desc">Immagini & momenti</span>
+      </a>
+      <a class="channel" href="https://www.facebook.com/yoganidraitalia" target="_blank" rel="noopener">
+        <span class="ch-name">Facebook</span>
+        <span class="ch-desc">Comunità & eventi</span>
+      </a>
+    </div>
+    <p class="soon">Questo spazio crescerà nel tempo, con nuovi articoli, podcast e uscite. Torna a trovarci.</p>
+  </section>
+
+</div>
+
+<footer class="page-footer">
+  <a href="/">Home</a>
+  <span class="sep">·</span>
+  <a href="mailto:danilo@yoganidraitalia.it">danilo@yoganidraitalia.it</a>
+  <span class="sep">·</span>
+  <a href="/prenota">Prenota una sessione</a>
+</footer>
+
+<script defer src="/assets/cookieconsent/cookieconsent.umd.js"></script>
+<script defer src="/assets/cookieconsent/cc-config.js"></script>
+</body>
+</html>
