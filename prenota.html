@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/cookieconsent/cookieconsent.css">
+<link rel="stylesheet" href="/assets/cookieconsent/cc-branding.css">
+<link rel="stylesheet" href="/assets/contact-form.css">
+<title>Prenota una sessione · Yoga Nidra Italia™ - Danilo Ratti</title>
+<meta name="description" content="Prenota una sessione di Yoga Nidra Integrato™ con Danilo Ratti: individuale, di gruppo, ritiro o formazione. Lascia i tuoi recapiti e la tua disponibilità.">
+<link rel="canonical" href="https://yoganidraitalia.it/prenota.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yoga Nidra Italia™">
+<meta property="og:locale" content="it_IT">
+<meta property="og:url" content="https://yoganidraitalia.it/prenota.html">
+<meta property="og:title" content="Prenota una sessione · Yoga Nidra Italia™">
+<meta property="og:description" content="Prenota una sessione di Yoga Nidra Integrato™ con Danilo Ratti: individuale, di gruppo, ritiro o formazione.">
+<meta property="og:image" content="https://yoganidraitalia.it/images/hero-cosmic.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prenota una sessione · Yoga Nidra Italia™">
+<meta name="twitter:description" content="Prenota una sessione di Yoga Nidra Integrato™ con Danilo Ratti.">
+<meta name="twitter:image" content="https://yoganidraitalia.it/images/hero-cosmic.jpg">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #07091a;
+  --bg-base: #0a0c1f;
+  --bg-elevated: #131630;
+  --bg-card: #181b35;
+  --gold: #c9a45c;
+  --gold-bright: #e8d3a8;
+  --gold-deep: #8b7038;
+  --text-primary: #f5f1e8;
+  --text-dim: #d4cdb8;
+  --line: rgba(245, 241, 232, 0.08);
+  --line-strong: rgba(201, 164, 92, 0.25);
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-label: 'Italiana', serif;
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-weight: 300;
+  line-height: 1.65;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem var(--gutter);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-brand { display: flex; align-items: center; gap: 0.75rem; }
+.topbar-brand img { height: 34px; }
+.topbar-brand span {
+  font-family: var(--font-label);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+.topbar a.back { color: var(--text-dim); font-size: 0.95rem; }
+.topbar a.back:hover { color: var(--gold); }
+
+.eyebrow {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+h1.display-l {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 1rem 0;
+}
+h1 em { font-style: italic; color: var(--gold-bright); }
+
+.page-footer {
+  text-align: center;
+  padding: 3rem var(--gutter);
+  border-top: 1px solid var(--line);
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+.page-footer a { color: var(--gold); }
+.page-footer .sep { opacity: 0.4; margin: 0 0.6rem; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="/" class="topbar-brand">
+    <img src="images/logo.png" alt="Yoga Nidra Italia™">
+    <span>Yoga Nidra Italia™</span>
+  </a>
+  <a href="/" class="back">← Home</a>
+</header>
+
+<section class="contatti" id="prenota">
+  <div class="contatti-inner">
+    <span class="eyebrow">Prenota</span>
+    <h1 class="display-l">Prenota una <em>sessione</em></h1>
+    <p class="contatti-intro">
+      Individuale, di gruppo, un ritiro o un percorso di formazione.
+      Lascia i tuoi recapiti e la tua disponibilità: ti ricontattiamo
+      personalmente per confermare giorno e orario.
+    </p>
+
+    <form name="prenotazioni" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/grazie.html" class="contatti-form">
+      <input type="hidden" name="form-name" value="prenotazioni">
+      <p class="hp"><label>Non compilare se sei umano: <input name="bot-field"></label></p>
+
+      <div class="field">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Come ti chiami" autocomplete="name">
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="latua@email.it" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="telefono">Telefono <span aria-hidden="true">*</span></label>
+          <input type="tel" id="telefono" name="telefono" required placeholder="+39 ..." autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="tipo">Tipo di esperienza <span aria-hidden="true">*</span></label>
+          <select id="tipo" name="tipo" required>
+            <option value="" selected disabled>Scegli…</option>
+            <option value="Sessione individuale">Sessione individuale</option>
+            <option value="Sessione di gruppo">Sessione di gruppo</option>
+            <option value="Ritiro">Ritiro</option>
+            <option value="Formazione insegnanti (The Spiral)">Formazione insegnanti (The Spiral)</option>
+            <option value="Non so ancora / mi consigli tu">Non so ancora / mi consigli tu</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="periodo">Periodo preferito</label>
+          <input type="text" id="periodo" name="periodo" placeholder="Es. settimane / giorni / orari">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" name="messaggio" placeholder="Raccontaci cosa cerchi o eventuali esigenze (facoltativo)"></textarea>
+      </div>
+
+      <label class="form-consent">
+        <input type="checkbox" name="consenso_privacy" required>
+        <span>Ho letto e accetto la <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a> e acconsento a essere ricontattato.</span>
+      </label>
+
+      <button type="submit" class="form-submit">Invia la richiesta <span class="arrow">&rarr;</span></button>
+    </form>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <a href="mailto:danilo@yoganidraitalia.it">danilo@yoganidraitalia.it</a>
+  <span class="sep">·</span>
+  <a href="https://t.me/yoganidraitalia" target="_blank" rel="noopener">Telegram</a>
+  <span class="sep">·</span>
+  <a href="/">Torna alla home</a>
+</footer>
+
+<script defer src="/assets/cookieconsent/cookieconsent.umd.js"></script>
+<script defer src="/assets/cookieconsent/cc-config.js"></script>
+</body>
+</html>

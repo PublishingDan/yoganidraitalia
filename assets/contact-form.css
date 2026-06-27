@@ -33,7 +33,8 @@
   margin-bottom: 0.5rem;
 }
 .contatti .field input,
-.contatti .field textarea {
+.contatti .field textarea,
+.contatti .field select {
   width: 100%;
   background: var(--bg-card, #181b35);
   border: 1px solid var(--line-strong, rgba(201,164,92,0.25));
@@ -44,8 +45,18 @@
   font-size: 1rem;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
+.contatti .field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23c9a45c' d='M6 8 0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
 .contatti .field input:focus,
-.contatti .field textarea:focus {
+.contatti .field textarea:focus,
+.contatti .field select:focus {
   outline: none;
   border-color: var(--gold, #c9a45c);
   box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.15);
