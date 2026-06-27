@@ -3,7 +3,30 @@
    Yoga Nidra Italia™
    ============================================================ */
 window.addEventListener('DOMContentLoaded', function () {
+
+  /* --- Google Analytics (si attiva solo col consenso "analytics") --- */
+  var GA_MEASUREMENT_ID = 'G-L1X5WKBBH2';
+  var gaInitialized = false;
+  function loadGoogleAnalytics() {
+    if (gaInitialized) return;
+    gaInitialized = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_MEASUREMENT_ID, { anonymize_ip: true });
+  }
+  function syncAnalyticsConsent() {
+    if (CookieConsent.acceptedCategory('analytics')) loadGoogleAnalytics();
+  }
+
   CookieConsent.run({
+    onFirstConsent: syncAnalyticsConsent,
+    onConsent: syncAnalyticsConsent,
+    onChange: syncAnalyticsConsent,
     guiOptions: {
       consentModal: {
         layout: 'box',
